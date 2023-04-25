@@ -1,0 +1,25 @@
+.third-section {
+  min-width: 444px;
+  width: 444px;
+  background-image: url('/images/landing/third-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+
+.title {
+  font-family: 'Urbanist';
+  font-weight: 900;
+  font-size: 114.142px;
+  line-height: 92px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  word-wrap: break-word;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  margin-top: -50px;
+}

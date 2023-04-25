@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0px;
+  color: #070320;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main{
+  height: 100vh;
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  min-width: 100%;
+}
+
+.main::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
+.main-content{
+  min-width: 100%;
+  height: 100vh;
+}

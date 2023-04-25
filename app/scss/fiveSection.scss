@@ -1,0 +1,24 @@
+.five-section {
+  min-width: 444px;
+  width: 444px;
+  background-image: url('/images/landing/five-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+
+.five-section__title {
+  font-family: 'Urbanist';
+  font-weight: 900;
+  font-size: 96px;
+  line-height: 81%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;  padding-left: 20px;
+  padding-right: 20px;
+  color: #FFFFFF;
+  span{
+    display: block;
+    word-break: break-all;
+  }
+}

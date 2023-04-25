@@ -1,0 +1,237 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 999;
+}
+
+.modal-link {
+  width: 32%;
+  margin-right: 8px;
+  margin-left: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+.modal-wrapper {
+  position: relative;
+  padding: 24px 32px;
+  background-color: #fff;
+  width: 606px;
+  border-radius: 32px;
+  border: 1px solid #000000;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.modal-title {
+  font-family: 'Urbanist';
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.clear-all-btn {
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #014DD1;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+
+
+  &:hover,
+  &:focus {
+    color: lighten(#014DD1, 20%);
+  }
+
+  &:active {
+    color: lighten(#014DD1, 40%);
+  }
+
+
+}
+
+.btn--close-modal {
+  position: absolute;
+  right: -20px;
+  height: 32px;
+  width: 32px;
+  top: -20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-cat {
+  position: absolute;
+  left: 0;
+  top: 0px
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.modal--open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+
+//================Accordion======================//
+
+.accordion {
+  .accordion-item {
+    border-bottom: 1px solid rgba(7, 3, 32, 0.11);
+  }
+
+  .accordion-expand-btn {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: black;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: #014DD1;
+
+      &::after {
+        cursor: pointer;
+        color: #014DD1;
+        border: 1px solid #014DD1;
+      }
+    }
+
+    .accordion-title {
+      padding: 1em 1.5em 1em 0;
+      font-family: 'Urbanist';
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    .icon {
+      display: inline-block;
+      position: absolute;
+      top: 28px;
+      right: 0;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        display: block;
+        width: 10px;
+        height: 2px;
+        transition: all 0.3s ease-out;
+        background-color: #333333;
+        transform: translate(-3px, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(-45deg);
+      }
+
+    }
+  }
+
+  .accordion-expand-btn[aria-expanded='true'] {
+    color: blue;
+
+    .icon {
+
+
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+      }
+    }
+
+    +.accordion-content {
+      opacity: 1;
+      max-height: unset;
+      will-change: opacity, max-height;
+      padding-bottom: 24px;
+    }
+  }
+
+  .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+  }
+}
+
+.tab-filter__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab-filter__button {
+  border: 1px solid #EDEDED;
+  background-color: #EDEDED;
+  border-radius: 56px;
+  height: 32px;
+  user-select: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  color: #6A6973;
+  transition: all 0.3s;
+  font-family: "Urbanist", sans-serif;
+  cursor: pointer;
+  &:hover {
+    background-color: darken(#EDEDED, 10%);
+  }
+}
+
+.tab-filter__button--active {
+  border: 1px solid #014DD1;
+  color: #014DD1;
+  &:hover {
+    background-color: darken(#EDEDED, 10%);
+  }
+}
+
+.selected-num {
+  background: #FF5525;
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  padding: 0px 4px;
+}

@@ -1,0 +1,128 @@
+.first-section {
+  background-color: #FFF846;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid #070320;
+  display: flex;
+  width: fit-content;
+  margin-bottom: 32px;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-menu {
+  display: flex;
+  padding: 7px 40px;
+  align-items: center;
+  gap: 48px;
+}
+
+.header-menu__item {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 143%;
+}
+
+.header-btn {
+  background-color: #070320;
+  border-radius: 0px;
+  color: #fff;
+  border: none;
+  width: 116px;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover,
+  &:focus {
+    color: darken(#fff, 20%);
+  }
+
+  &:active {
+    color: darken(#fff, 40%);
+  }
+}
+
+.first-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.first-descr {
+  margin-left: 51px;
+  font-family: 'Urbanist';
+  font-weight: 600;
+  line-height: 19px;
+  text-transform: capitalize;
+  opacity: 0.3;
+  margin-bottom: 20px;
+}
+
+.first-logoText {
+  margin-left: 51px;
+  margin-bottom: 32px;
+}
+
+.first-main {
+  text-align: center;
+  margin-left: -1px;
+  padding: 0px 45px;
+  background-image: url('/images/landing/first-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.first-title {
+  color: #fff;
+  font-family: 'Urbanist';
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 83%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  width: 80%;
+  margin: 0px auto;
+  margin-bottom: 32px;
+  margin-top: -50px;
+}
+
+.btn-transform {
+  width: 202px;
+  height: 56px;
+  margin: 0px auto;
+  background-color: #070320;
+  border-radius: 0px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Manrope';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    color: darken(#fff, 20%);
+  }
+
+  &:active {
+    color: darken(#fff, 40%);
+  }
+}

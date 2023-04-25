@@ -1,0 +1,106 @@
+.five-section {
+  background-color: aqua;
+}
+
+
+.four-section {
+  background-color: yellow;
+  display: flex;
+  min-width: fit-content;
+  width: fit-content;
+}
+
+.four-section__block {
+  width: 621px;
+  height: 90%;
+  margin-top: auto;
+  position: sticky;
+  border-radius: 48px;
+  border: 2px solid #000000;
+  padding: 16px 57px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.four-section__block-number {
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 144px;
+  line-height: 173px;
+  color: #FFFFFF;
+
+}
+
+.four-section__block-descr {
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 56px;
+  color: #FFFFFF;
+
+}
+
+.four-section__block-1 {
+  background-color: #363051;
+  left: 0;
+  margin-left: 20px;
+}
+
+
+.four-section__block-2 {
+  background-color: #B2D6FF;
+  left: 44px;
+  margin-left: -30px;
+}
+
+
+.four-section__block-3 {
+  background-color: #E09884;
+  left: 88px;
+  margin-left: -30px;
+}
+
+.final {
+  padding-left: 82px;
+  padding-right: 82px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  z-index: 100;
+  background-color: yellow;
+}
+
+.final__inner{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.btn-transform-round {
+  margin-top: 32px;
+  width: 228px;
+  height: 228px;
+  background-color: #070320;
+  border-radius: 50%;
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover,
+  &:focus {
+    color: darken(#fff, 20%);
+  }
+
+  &:active {
+    color: darken(#fff, 40%);
+  }
+}

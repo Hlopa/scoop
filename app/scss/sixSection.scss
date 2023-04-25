@@ -1,0 +1,39 @@
+.six-section{
+  background-color: #FFB8A4;
+  display: flex;
+  align-items: center;
+  min-width: fit-content;
+  width: fit-content;
+
+}
+
+.six-section__inner{
+  height: 95%;
+  display: flex;
+  align-items: center;
+  img{
+    flex-shrink: 0;
+  }
+}
+
+.six-section__logos{
+  height: 100%;
+  margin-right: 16px;
+  flex-shrink: 0;
+  padding-left: 98px;
+  img{
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.six-section-logo{
+  margin-left: 37px;
+  margin-right: 45px;
+}
+
+.six-section-last-img{
+  margin-left: 74px;
+  margin-right: 131px;
+
+}
