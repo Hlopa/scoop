@@ -173,7 +173,7 @@ img {
   text-align: center;
   margin-left: -1px;
   padding: 0px 45px;
-  background-image: url("/images/landing/first-bg.png");
+  background-image: url("../images/landing/first-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-flex: 1;
@@ -380,7 +380,7 @@ img {
 .third-section {
   min-width: 444px;
   width: 444px;
-  background-image: url("/images/landing/third-bg.png");
+  background-image: url("../images/landing/third-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -537,7 +537,7 @@ img {
 .five-section {
   min-width: 444px;
   width: 444px;
-  background-image: url("/images/landing/five-bg.png");
+  background-image: url("../images/landing/five-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -620,7 +620,7 @@ img {
 .seven-section {
   min-width: 444px;
   width: 444px;
-  background-image: url("/images/landing/seven-section.png");
+  background-image: url("../images/landing/seven-section.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
