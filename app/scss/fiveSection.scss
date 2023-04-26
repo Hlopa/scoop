@@ -22,3 +22,26 @@
     word-break: break-all;
   }
 }
+
+
+@media (max-width: 1300px) {
+  .five-section__title {
+    font-size: 50px;
+    line-height: 81%;
+  }
+
+  .five-section{
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .five-section__title {
+    font-size: 40px;
+    line-height: 81%;
+  }
+
+ 
+}
