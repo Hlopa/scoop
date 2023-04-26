@@ -213,6 +213,7 @@
   transition: all 0.3s;
   font-family: "Urbanist", sans-serif;
   cursor: pointer;
+
   &:hover {
     background-color: darken(#EDEDED, 10%);
   }
@@ -221,6 +222,7 @@
 .tab-filter__button--active {
   border: 1px solid #014DD1;
   color: #014DD1;
+
   &:hover {
     background-color: darken(#EDEDED, 10%);
   }
@@ -234,4 +236,19 @@
   line-height: 14px;
   color: #FFFFFF;
   padding: 0px 4px;
+}
+
+@media (max-width: 400px) {
+  .modal-wrapper {
+    padding: 24px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+  }
+
+  .modal-header {
+    margin-bottom: 8px;
+  }
+
 }

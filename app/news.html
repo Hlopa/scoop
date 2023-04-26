@@ -22,16 +22,34 @@
           <img src="images/logo-text.svg" alt="logo" />
           <p class="news-header__descr">New Culture Of Being Informed</p>
         </div>
-        <ul class="news-header__menu">
-          <li class="news-header__menu-item link--open-modal"> Topics</li>
-          <li class="news-header__menu-item">About</li>
-          <li class="news-header__menu-avatar">
+       
+        <div class="right-news-header">
+          <div style="display: flex; align-items: center;">
+            <div class="menu-burger-inner-news">
+              <div class="header__menu-icon menu-burger-news">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <ul class="news-header__menu">
+            <li class="news-header__menu-item link--open-modal"> Topics</li>
+            <li class="news-header__menu-item">About</li>
+          </ul>
+
+          <div class="avatar-box">
             <div class="avatar">
               <img src="images/news/avatar.png" alt="avatar" />
             </div>
             <p class="avatar-name">Guy Hawkins</p>
-          </li>
-        </ul>
+          </div>
+
+        </div>
+
+
+
+
       </div>
     </header>
     <main class="news-main">
@@ -41,7 +59,7 @@
             <img src="images/news/presidend.png" />
           </div>
           <div class="aside-bottom">
-            <form>
+            <form class="select-mode">
               <div class="__select" data-state="">
                 <div class="__select__title" data-default="Mr. President mode">Mr. President mode</div>
                 <div class="__select__content">
@@ -58,11 +76,14 @@
               </div>
             </form>
 
-            <ul class="aside__menu">
-              <li>Privacy Policy</li>
-              <li>Terms of Use</li>
-            </ul>
-            <p class="right">© Scoop, 2023</p>
+            <div class="news-aside-desktop">
+              <ul class="aside__menu">
+                <li>Privacy Policy</li>
+                <li>Terms of Use</li>
+              </ul>
+              <p class="right">© Scoop, 2023</p>
+            </div>
+
           </div>
         </aside>
         <div class="news-news">
@@ -77,7 +98,13 @@
 
               <div class="news-item__info">
                 <div class="news-item__header">
-                  <h3 class="news-item__name">Forbes</h3>
+                  <div style="display: flex; gap: 8px; align-items: center; align-self: flex-start;">
+                    <div class="news-item__logo--mobile">
+                      <img src="images/news/logo-1.png" alt="logo-newspaper" />
+                    </div>
+                    <h3 class="news-item__name">Forbes</h3>
+                  </div>
+
                   <div class="news-item__data">
                     <p>16.03.2023</p>
                     <div class="separator"></div>
@@ -123,7 +150,12 @@
 
               <div class="news-item__info">
                 <div class="news-item__header">
-                  <h3 class="news-item__name">Forbes</h3>
+                  <div style="display: flex; gap: 8px; align-items: center; align-self: flex-start;">
+                    <div class="news-item__logo--mobile">
+                      <img src="images/news/logo-1.png" alt="logo-newspaper" />
+                    </div>
+                    <h3 class="news-item__name">Forbes</h3>
+                  </div>
                   <div class="news-item__data">
                     <p>16.03.2023</p>
                     <div class="separator"></div>
@@ -169,7 +201,12 @@
 
               <div class="news-item__info">
                 <div class="news-item__header">
-                  <h3 class="news-item__name">Forbes</h3>
+                  <div style="display: flex; gap: 8px; align-items: center; align-self: flex-start;">
+                    <div class="news-item__logo--mobile">
+                      <img src="images/news/logo-1.png" alt="logo-newspaper" />
+                    </div>
+                    <h3 class="news-item__name">Forbes</h3>
+                  </div>
                   <div class="news-item__data">
                     <p>16.03.2023</p>
                     <div class="separator"></div>
@@ -215,7 +252,12 @@
 
               <div class="news-item__info">
                 <div class="news-item__header">
-                  <h3 class="news-item__name">Forbes</h3>
+                  <div style="display: flex; gap: 8px; align-items: center; align-self: flex-start;">
+                    <div class="news-item__logo--mobile">
+                      <img src="images/news/logo-1.png" alt="logo-newspaper" />
+                    </div>
+                    <h3 class="news-item__name">Forbes</h3>
+                  </div>
                   <div class="news-item__data">
                     <p>16.03.2023</p>
                     <div class="separator"></div>
@@ -261,7 +303,12 @@
 
               <div class="news-item__info">
                 <div class="news-item__header">
-                  <h3 class="news-item__name">Forbes</h3>
+                  <div style="display: flex; gap: 8px; align-items: center; align-self: flex-start;">
+                    <div class="news-item__logo--mobile">
+                      <img src="images/news/logo-1.png" alt="logo-newspaper" />
+                    </div>
+                    <h3 class="news-item__name">Forbes</h3>
+                  </div>
                   <div class="news-item__data">
                     <p>16.03.2023</p>
                     <div class="separator"></div>
@@ -301,12 +348,19 @@
             </div>
           </div>
         </div>
+
+        <div class="news-mobile-footer">
+          <ul class="aside__menu">
+            <li>Privacy Policy</li>
+            <li>Terms of Use</li>
+          </ul>
+          <p class="right">© Scoop, 2023</p>
+        </div>
       </div>
     </main>
   </div>
 
   <div class="modal">
-   
     <div class="modal-wrapper">
       <button type="button" class="btn--close-modal">
         <svg width="24" height="24" viewBox="0 0 24 24">
@@ -324,8 +378,8 @@
       </div>
       <div class="accordion">
         <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Finance</span><span
-              class="icon" aria-hidden="true"></span></button>
+          <button class="accordion-expand-btn" id="accordion-button-1" aria-expanded="false"><span
+              class="accordion-title">Finance</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <div class="tab-filter__buttons">
               <button class="tab-filter__button">Documents</button>
@@ -337,12 +391,13 @@
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Politic <span class="selected-num">5</span></span><span
-              class="icon" aria-hidden="true"></span></button>
+          <button class="accordion-expand-btn" id="accordion-button-2" aria-expanded="false"><span
+              class="accordion-title">Politic <span class="selected-num">5</span></span><span class="icon"
+              aria-hidden="true"></span></button>
           <div class="accordion-content">
             <div class="tab-filter__buttons">
               <button class="tab-filter__button tab-filter__button--active">
-                Documents 
+                Documents
               </button>
               <button class="tab-filter__button">Bitcoin</button>
               <button class="tab-filter__button">Peace</button>
@@ -359,8 +414,9 @@
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Auto <span class="selected-num">2</span></span><span
-              class="icon" aria-hidden="true"></span></button>
+          <button class="accordion-expand-btn" id="accordion-button-3" aria-expanded="false"><span
+              class="accordion-title">Auto <span class="selected-num">2</span></span><span class="icon"
+              aria-hidden="true"></span></button>
           <div class="accordion-content">
             <div class="tab-filter__buttons">
               <button class="tab-filter__button">Documents</button>
@@ -374,8 +430,8 @@
           </div>
         </div>
         <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Relax</span><span
-              class="icon" aria-hidden="true"></span></button>
+          <button class="accordion-expand-btn" id="accordion-button-4" aria-expanded="false"><span
+              class="accordion-title">Relax</span><span class="icon" aria-hidden="true"></span></button>
           <div class="accordion-content">
             <div class="tab-filter__buttons">
               <button class="tab-filter__button tab-filter__button--active">

@@ -24,7 +24,7 @@ function style() {
 }
 
 function stylelib() {
-  return src(["node_modules/normalize.css/normalize.css"])
+  return src(["node_modules/normalize.css/normalize.css", "node_modules/animate.css/animate.css"])
     .pipe(concat("libs.min.css"))
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(dest("app/css"));

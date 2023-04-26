@@ -6,6 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Scoop</title>
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,12 +29,11 @@
   <section class="main" id="main">
     <div class="main-content first-section">
       <header class="header">
+        <div class="header-logo">
+          <img src="images/landing/headerLogo.svg" alt="scoop logo">
+        </div>
         <ul class="header-menu">
-          <li class="header-menu__item">
-            <div class="header-logo">
-              <img src="images/landing/headerLogo.svg" alt="scoop logo">
-            </div>
-          </li>
+
           <li class="header-menu__item">
             Subscriptions
           </li>
@@ -34,21 +44,37 @@
             Contacts
           </li>
         </ul>
-        <button class="header-btn">Enter</button>
+
+        <div style="display: flex; align-items: center;">
+          <div class="menu-burger-inner">
+            <div class="header__menu-icon menu-burger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <button class="header-btn">Enter</button>
+        </div>
+
       </header>
       <div class="first-info">
         <p class="first-descr">New Culture Of Being Informed</p>
-        <img src="images/logo-text-shrink.svg" alt="logo-text" class="first-logoText" width="347px">
+        <img src="images/logo-text-shrink.svg" alt="logo-text" class="first-logoText">
         <div class="first-main">
           <h1 class="first-title">TIME TO CHANGE YOUR METHOD OF BEING INFORMED </h1>
           <a class="btn-transform" href="news.html">Enter</a>
+          <div class="animate-bg"></div>
         </div>
       </div>
     </div>
     <div class="main-content near-second"></div>
     <div class="main-content second-section">
       <div class="second-section__inner">
-        <div class="second-section-blobs"> <img src="images/landing/second-blobs.svg" /></div>
+        <div class="second-section-blobs"> <img src="images/landing/second-blobs.svg" class="second-section__img" />
+
+          <img src="images/landing/second-blobs-mobile.svg" class="second-section__img-mobile">
+
+        </div>
         <div class="second-section__circle">
           <div id="container">
             <div id="circle">
@@ -93,7 +119,8 @@
       <div class="final">
         <div class="final__inner">
           <img src="images/logo-text-shrink.svg" alt="logo-text" width="439">
-          <button class="btn-transform-round">Join</button>
+          <div style="position: relative; z-index: 50;">  <button class="btn-transform-round">Join</button></div>
+        
         </div>
       </div>
     </div>
@@ -105,10 +132,17 @@
         <div class="six-section__logos">
           <img src="images/landing/six-logos.png" />
         </div>
-        <img src="images/landing/arrowRightBig.svg" />
+        <div class="six-section-arrow-mobile">
+          <img src="images/logo-text-shrink.svg" class="six-section-logo-mobile" />
+          <img src="images/landing/arrowRightBig.svg" class="six-section-first-arrow" />
+        </div>
+
+
+        <div class="six-section-mobile-img"> <img src="images/landing/six-section-img.png"></div>
+
       </div>
     </div>
-    <div class="main-content six-section">
+    <div class="main-content six-section six-section--second">
       <img src="images/logo-text-shrink.svg" class="six-section-logo" />
       <img src="images/landing/arrowRightBig.svg" />
       <img src="images/landing/six-section-img.png" class="six-section-last-img">
@@ -119,8 +153,10 @@
     </div>
     <div class="main-content last-section">
       <div class="last-section__inner">
-        <img src="images/logo-text-shrink.svg" width="218" style="margin-bottom: 9px;" />
-        <p class="last-section-title">Immerse and surf it in a peaceful world of news!</p>
+        <div>
+          <img src="images/logo-text-shrink.svg" width="218" style="margin-bottom: 9px;" />
+          <p class="last-section-title">Immerse and surf it in a peaceful world of news!</p>
+        </div>
         <button class="btn-transform-round">Register now</button>
         <footer class="footer">
           <div class="footer__inner">
@@ -141,7 +177,6 @@
             </div>
             <div class="footer-bottom">
               <p>© Scoop, 2023</p>
-              <p class="footer-phone">+1 877 999 88 77</p>
             </div>
           </div>
 

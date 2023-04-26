@@ -21,5 +21,30 @@
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
-  margin-top: -50px;
+  margin-top: -99px;
+}
+
+@media (max-width: 1300px) {
+  .title {
+    font-size: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 115%;
+  }
+}
+
+@media (max-width: 800px) {
+  .third-section {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 115%;
+  }
 }
