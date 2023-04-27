@@ -13,6 +13,7 @@
   align-items: center;
   img{
     flex-shrink: 0;
+    max-width: unset;
   }
 }
 
@@ -55,17 +56,20 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
   .six-section__inner{
     justify-content: space-between;
+    img{
+      width: 100%;
+    }
   }
 
   .six-section{
    width: 100%;
    height: unset;
-   padding-top: 32px;
-   padding-bottom: 32px;
+   padding-top: 100px;
+   padding-bottom: 100px;
   }
   .six-section__logos{
     height: unset;

@@ -1,5 +1,5 @@
 .last-section {
-  background-color: #FFF846;
+  background-color: #fff846;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@
 }
 
 .last-section-title {
-  font-family: 'Urbanist';
+  font-family: "Urbanist";
   font-weight: 700;
   font-size: 88px;
   line-height: 80px;
@@ -57,7 +57,7 @@
 }
 
 .footer-phone {
-  font-family: 'Manrope';
+  font-family: "Manrope";
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
@@ -79,21 +79,18 @@
 
   .last-section__inner {
     padding-left: 0px;
-  }
 
+  }
 }
 
-
-@media (max-width: 800px) {
-
+@media (max-width: 850px) {
   .footer {
     position: relative;
-
   }
 
   .last-section__inner {
     justify-content: space-between;
-    padding-top: 32px;
+    padding-top: 150px;
   }
 
   .last-section-title {
@@ -103,7 +100,6 @@
   .btn-transform-round {
     margin-top: 0px;
   }
-
 }
 
 @media (max-width: 700px) {
@@ -114,7 +110,22 @@
   .last-section {
     .btn-transform-round {
       align-self: center;
-
     }
+  }
+
+  .last-section__inner {
+    padding-top: 100px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .last-section-title {
+    font-size: 34px;
+  }
+
+
+  .last-section__inner {
+    padding-top: 50px;
   }
 }
