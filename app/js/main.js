@@ -10,7 +10,7 @@ function scrollHorizontally(e) {
   e.preventDefault();
 }
 
-if (main && windowWidth >= 800) {
+if (main && windowWidth >= 850) {
   if (document.getElementById("main").addEventListener) {
     // IE9, Chrome, Safari, Opera
     document.getElementById("main").addEventListener("mousewheel", scrollHorizontally, false);
@@ -25,7 +25,7 @@ if (main && windowWidth >= 800) {
 if (main) {
   window.addEventListener('resize', () => {
     let windowWidth = window.innerWidth;
-    if (windowWidth >= 800) {
+    if (windowWidth >= 850) {
       if (document.getElementById("main").addEventListener) {
         // IE9, Chrome, Safari, Opera
         document.getElementById("main").addEventListener("mousewheel", scrollHorizontally, false);
@@ -41,7 +41,6 @@ if (main) {
       document.getElementById("main").removeEventListener("onmousewheel", scrollHorizontally);
     }
   });
-
 }
 
 
@@ -53,6 +52,9 @@ if (news) {
   const selectSingle = document.querySelector(".__select");
   const selectSingle_title = selectSingle.querySelector(".__select__title");
   const selectSingle_labels = selectSingle.querySelectorAll(".__select__label");
+  const title = document.getElementById('news-title');
+  const img = document.getElementById('news-mode-img');
+
 
   // Toggle select
   selectSingle_title.addEventListener("click", () => {
@@ -69,7 +71,27 @@ if (news) {
       selectSingle_title.textContent = evt.target.textContent;
       selectSingle.setAttribute("data-state", "");
 
-      console.log(selectSingle_title.textContent);
+      switch (selectSingle_title.textContent) {
+        case 'Mr. President mode':
+          title.textContent ='Dear Sir, let me introduce you to the current world situation how I see it.';
+          img.src = 'images/news/presidend.png';
+          img.style= 'display: block'
+          break;
+        case 'Child mode':
+          title.textContent ='Hi, grown ups! Let me try to tell you what I think about what I know :)';
+          img.src = 'images/news/child.png';
+          img.style= 'display: block'
+          break;
+        case 'Preacher mode':
+          title.textContent ='Good day and welcome to this place of worship to honor the news from the world.';
+          img.src = 'images/news/preacher.png';
+          img.style= 'display: block'
+          break;
+        default:
+          title.textContent ='Hey, this is SCOOP, stay informed in a fast and entertaining way with us.';
+          img.style= 'display: none'
+      }
+      
     });
   }
 
@@ -89,6 +111,7 @@ if (news) {
   });
 
 }
+
 
 
 //======================Accordions with tags in tag modal====================//

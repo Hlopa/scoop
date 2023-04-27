@@ -80,6 +80,7 @@
   align-items: center;
   text-align: center;
   background-color: yellow;
+  z-index: 119;
 }
 
 .final__inner {
@@ -164,12 +165,16 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .four-section {
     display: block;
     width: 100%;
+    min-width: 100%;
     height: fit-content;
-    padding-top: 32px;
+  }
+
+  .final__inner{
+    padding-left: 0px;
   }
 
   .four-section__block {
@@ -212,7 +217,12 @@
 
   .final {
     justify-content: center;
-    padding-bottom: 32px;
+    padding-bottom: 100px;
+    width: unset;
+  }
+
+  .final-logo{
+    margin-bottom: 24px;
   }
 }
 
