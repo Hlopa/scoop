@@ -54,7 +54,7 @@ if (news) {
   const selectSingle_labels = selectSingle.querySelectorAll(".__select__label");
   const title = document.getElementById('news-title');
   const img = document.getElementById('news-mode-img');
-
+  const sourse = img.previousElementSibling;
 
   // Toggle select
   selectSingle_title.addEventListener("click", () => {
@@ -75,17 +75,20 @@ if (news) {
         case 'Mr. President mode':
           title.textContent ='Dear Sir, let me introduce you to the current world situation how I see it.';
           img.src = 'images/news/presidend.png';
-          img.style= 'display: block'
+          img.style= 'display: block';
+          sourse.srcset = 'images/news/presidend.webp'
           break;
         case 'Child mode':
           title.textContent ='Hi, grown ups! Let me try to tell you what I think about what I know :)';
           img.src = 'images/news/child.png';
-          img.style= 'display: block'
+          img.style= 'display: block';
+          sourse.srcset = 'images/news/child.webp'
           break;
         case 'Preacher mode':
           title.textContent ='Good day and welcome to this place of worship to honor the news from the world.';
           img.src = 'images/news/preacher.png';
-          img.style= 'display: block'
+          img.style= 'display: block';
+          sourse.srcset = 'images/news/preacher.webp'
           break;
         default:
           title.textContent ='Hey, this is SCOOP, stay informed in a fast and entertaining way with us.';
