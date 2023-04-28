@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoop Recover password</title>
+  <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon-180x180.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Unbounded:wght@700&family=Urbanist:wght@500;600;700;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main class="login">
+    <header class="header">
+      <div class="header-logo">
+        <img src="images/landing/headerLogo.svg" alt="scoop logo">
+      </div>
+      <ul class="header-menu">
+
+        <li class="header-menu__item">
+          Subscriptions
+        </li>
+        <li class="header-menu__item">
+          About
+        </li>
+        <li class="header-menu__item">
+          Contacts
+        </li>
+      </ul>
+      <div style="display: flex; align-items: center;">
+        <div class="menu-burger-inner">
+          <div class="header__menu-icon menu-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <a class="header-btn">Enter</a>
+      </div>
+
+    </header>
+
+    <div class="left-auth-main">
+      <div class="left-auth-main-inner">
+        <img src="images/logo-text-shrink.svg" class="auth-logo" alt="logo" width="174">
+        <form action="send" class="auth-form">
+          <h1 class="auth-title">Recover password</h1>
+          <p class="auth-descr">Enter your email . We will send you the instructions</p>
+          <div class="input-box">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="text" placeholder="Your email" />
+            <div class="input-error-message"></div>
+          </div>
+          <a class="btn-transform auth-btn">
+            Send
+          </a>
+        </form>
+      </div>
+    </div>
+
+    <div class="right-auth-img">
+      <img src="images/auth/bg.jpg">
+    </div>
+  </main>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
