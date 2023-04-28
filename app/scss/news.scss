@@ -220,6 +220,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: space-between;
+}
+
+.news-item__footer-left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .news-item__footer-item {
@@ -232,6 +239,17 @@
     text-transform: uppercase;
     color: #9d9ca7;
   }
+}
+
+.sourse-link{
+  font-family: 'Manrope';
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+display: flex;
+align-items: center;
+gap: 4px;
+color: #014DD1;
 }
 
 //============================aside=======================//
@@ -302,7 +320,7 @@
   height: 48px;
   position: absolute;
   bottom: -60px;
-  left: 20px;
+  right: 0px;
   cursor: pointer;
   border-radius: 12px;
   border: 1px solid #000000;
