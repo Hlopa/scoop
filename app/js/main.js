@@ -146,16 +146,51 @@ if (items) {
 
 //выбор новых фильтров
 const tabFilterButtons = document.querySelectorAll(".tab-filter__button");
+const themeSection = document.querySelectorAll('.tab-filter__buttons');
 
-tabFilterButtons?.forEach((button) => {
-  button.addEventListener('click', function (e) {
-    if (button.classList.contains('tab-filter__button--active')) {
-      button.classList.remove('tab-filter__button--active');
+themeSection?.forEach((theme) => {
+  const themeSelectAll = theme.querySelector('.select-all');
+  const selectors = theme.querySelectorAll('.select-btn');
+
+  themeSelectAll.addEventListener('click', function (e) {
+    themeSelectAll.classList.toggle('tab-filter__button--active');
+    if(themeSelectAll.classList.contains('tab-filter__button--active')){
+      selectors.forEach((select) => {
+        select.classList.add('tab-filter__button--active');
+      })
     } else {
-      button.classList.add('tab-filter__button--active');
+      selectors.forEach((select) => {
+        select.classList.remove('tab-filter__button--active');
+      })
     }
+  });
+
+  selectors.forEach((select) => {
+    select.addEventListener('click', function (e) {
+      if(select.classList.contains('tab-filter__button--active')){
+        selectors.forEach((item) => {
+          item.classList.remove('tab-filter__button--active')
+        })
+        themeSelectAll.classList.remove('tab-filter__button--active')
+      } else {
+        selectors.forEach((item) => {
+          item.classList.remove('tab-filter__button--active')
+        })
+        select.classList.add('tab-filter__button--active')
+        themeSelectAll.classList.remove('tab-filter__button--active')
+      }
+
+     
+    })
   })
-});
+})
+
+
+// tabFilterButtons?.forEach((button) => {
+//   button.addEventListener('click', function (e) {
+//     button.classList.toggle('tab-filter__button--active')
+//   })
+// });
 
 
 

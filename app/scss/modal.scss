@@ -28,25 +28,26 @@
   max-height: calc(100vh - 100px);
   overflow-y: auto;
   overflow-x: hidden;
-  &::-webkit-scrollbar {
-    width: 8px;
-  };
 
-  &::-webkit-scrollbar-track{
-    margin-top: 26px;
-    margin-bottom: 26px;
-  };
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    // margin-top: 26px;
+    // margin-bottom: 26px;
+  }
+
   &::-webkit-scrollbar-thumb {
-    background-color: #EDEDED;
+    background-color: #ededed;
     border-radius: 20px;
-  };
+  }
 }
 
-.modal-inner{
-  padding: 24px 32px;
+.modal-inner {
+  padding: 20px 32px 0px 32px;
   background-color: #fff;
   width: 606px;
-  border-radius: 32px;
   border: 1px solid #000000;
 }
 
@@ -54,50 +55,62 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .modal-title {
-  font-family: 'Urbanist';
-
+  font-family: "Urbanist";
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
 }
 
 .clear-all-btn {
-  font-family: 'Urbanist';
+  font-family: "Urbanist";
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  color: #014DD1;
+  color: #014dd1;
   background-color: unset;
   border: unset;
   cursor: pointer;
 
-
   &:hover,
   &:focus {
-    color: lighten(#014DD1, 20%);
+    color: lighten(#014dd1, 20%);
   }
 
   &:active {
-    color: lighten(#014DD1, 40%);
+    color: lighten(#014dd1, 40%);
   }
-
-
 }
 
-.modal-outer{
+.modal-apply-btn {
+  width: calc(100% + 32px + 32px);
+  background-color: #000000;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  height: 48px;
+  margin-left: -32px;
+  margin-right: -32px;
+  position: sticky;
+  bottom: -0.5px;
+  cursor: pointer;
+}
+
+.modal-outer {
   position: relative;
 }
 
 .btn--close-modal {
   position: absolute;
-  right: -30px;
+  right: -25px;
   height: 32px;
   width: 32px;
-  top: -30px;
+  top: -25px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -106,7 +119,7 @@
 .modal-cat {
   position: absolute;
   left: 0;
-  top: 0px
+  top: 0px;
 }
 
 .btn:active {
@@ -117,7 +130,6 @@
   pointer-events: auto;
   opacity: 1;
 }
-
 
 //================Accordion======================//
 
@@ -142,18 +154,18 @@
     &:hover,
     &:focus {
       cursor: pointer;
-      color: #014DD1;
+      color: #014dd1;
 
       &::after {
         cursor: pointer;
-        color: #014DD1;
-        border: 1px solid #014DD1;
+        color: #014dd1;
+        border: 1px solid #014dd1;
       }
     }
 
     .accordion-title {
       padding: 1em 1.5em 1em 0;
-      font-family: 'Urbanist';
+      font-family: "Urbanist";
       font-size: 18px;
       line-height: 22px;
     }
@@ -181,16 +193,13 @@
       &::after {
         transform: translate(3px, -50%) rotate(-45deg);
       }
-
     }
   }
 
-  .accordion-expand-btn[aria-expanded='true'] {
+  .accordion-expand-btn[aria-expanded="true"] {
     color: blue;
 
     .icon {
-
-
       &::before {
         transform: translate(-3px, -50%) rotate(-45deg);
       }
@@ -224,36 +233,64 @@
 }
 
 .tab-filter__button {
-  border: 1px solid #EDEDED;
-  background-color: #EDEDED;
+  border: 1px solid #ededed;
+  background-color: #ededed;
   border-radius: 56px;
   height: 32px;
   user-select: none;
   padding-left: 12px;
   padding-right: 12px;
-  color: #6A6973;
+  color: #6a6973;
   transition: all 0.3s;
   font-family: "Urbanist", sans-serif;
   cursor: pointer;
 
   &:hover {
-    background-color: darken(#EDEDED, 10%);
+    background-color: darken(#ededed, 10%);
+  }
+}
+
+.select-all {
+  background-color: #fff;
+
+  &:hover {
+    background-color: #a9c4f1;
+  }
+}
+
+.tab-filter__button--active.select-all {
+  background-color: #014dd1;
+  color: #fff;
+
+  &:hover {
+    background-color: #76a2ee;
   }
 }
 
 .tab-filter__button--active {
-  border: 1px solid #014DD1;
-  color: #014DD1;
+  border: 1px solid #014dd1;
+  color: #014dd1;
 
   &:hover {
-    background-color: darken(#EDEDED, 10%);
+    background-color: darken(#ededed, 10%);
+  }
+}
+
+@media (max-width: 670px) {
+  .modal-outer {
+    width: 100%;
+  }
+
+  .modal-inner {
+    width: 100%;
+  }
+
+  .modal-wrapper {
+    width: 100%;
   }
 }
 
 @media (max-width: 400px) {
-  .modal-wrapper {
-    padding: 24px;
-  }
 
   .modal-title {
     font-size: 24px;
@@ -261,6 +298,26 @@
 
   .modal-header {
     margin-bottom: 8px;
+  }
+
+  .modal-inner {
+    padding: 24px 24px 0px 24px;
+  }
+
+  .news-item__footer-left {
+    flex-basis: 100%;
+  }
+
+  .news-item__footer {
+    flex-wrap: wrap;
+  }
+
+  .sourse-link {
+    margin-left: auto;
+  }
+
+  .news-item__header {
+    gap: 0px;
   }
 
 }
