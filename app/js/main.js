@@ -94,9 +94,17 @@ if (news) {
           title.textContent ='Hey, this is SCOOP, stay informed in a fast and entertaining way with us.';
           img.style= 'display: none'
       }
-      
     });
   }
+
+//============Open Acc Menu===============//
+  const avatar = document.querySelector('.avatar-box');
+  const logOutBtn = document.querySelector('.avatar-btn-logOut');
+
+  avatar?.addEventListener('click', function (e) {
+    logOutBtn.classList.toggle('avatar-btn-logOut--active');
+  })
+  
 
   //open tags modal  
   const linkOpen = document.querySelector('.link--open-modal');

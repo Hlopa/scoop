@@ -43,6 +43,11 @@
               <img src="images/news/avatar.png" alt="avatar" />
             </div>
             <p class="avatar-name">Guy Hawkins</p>
+
+
+            <button class="avatar-btn-logOut"><img src="images/news/logOut.svg" class='sign-out-img' /> Sign
+              Out</button>
+
           </div>
         </div>
       </div>
@@ -356,7 +361,7 @@
   </div>
 
   <div class="modal">
-    <div class="modal-wrapper">
+    <div class="modal-outer">
       <button type="button" class="btn--close-modal">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <rect width="24" height="24" rx="12" />
@@ -367,80 +372,135 @@
             fill="#ffffff" />
         </svg>
       </button>
-      <div class="modal-header">
-        <h4 class="modal-title">Topics (2)</h4>
-        <button class="clear-all-btn">Clear all</button>
-      </div>
-      <div class="accordion">
-        <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-1" aria-expanded="false"><span
-              class="accordion-title">Finance</span><span class="icon" aria-hidden="true"></span></button>
-          <div class="accordion-content">
-            <div class="tab-filter__buttons">
-              <button class="tab-filter__button">Documents</button>
-              <button class="tab-filter__button tab-filter__button--active">Bitcoin</button>
-              <button class="tab-filter__button">Peace</button>
-              <button class="tab-filter__button">Auto</button>
-              <button class="tab-filter__button">Relationship</button>
-            </div>
+      <div class="modal-wrapper">
+        <div class="modal-inner">
+          <div class="modal-header">
+            <h4 class="modal-title">Topics</h4>
+            <button class="clear-all-btn">Clear all</button>
           </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-2" aria-expanded="false"><span
-              class="accordion-title">Politic <span class="selected-num">5</span></span><span class="icon"
-              aria-hidden="true"></span></button>
-          <div class="accordion-content">
-            <div class="tab-filter__buttons">
-              <button class="tab-filter__button tab-filter__button--active">
-                Documents
-              </button>
-              <button class="tab-filter__button">Bitcoin</button>
-              <button class="tab-filter__button">Peace</button>
-              <button class="tab-filter__button">Auto</button>
-              <button class="tab-filter__button">Relationship</button>
-              <button class="tab-filter__button tab-filter__button--active">
-                Internet
-              </button>
-              <button class="tab-filter__button">Relocate</button>
-              <button class="tab-filter__button">Animals</button>
-              <button class="tab-filter__button">Finance</button>
-              <button class="tab-filter__button">People</button>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-expand-btn" id="accordion-button-1" aria-expanded="false"><span
+                  class="accordion-title">Finance</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="tab-filter__buttons">
+                  <button class="tab-filter__button">Documents</button>
+                  <button class="tab-filter__button tab-filter__button--active">Bitcoin</button>
+                  <button class="tab-filter__button">Peace</button>
+                  <button class="tab-filter__button">Auto</button>
+                  <button class="tab-filter__button">Relationship</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-3" aria-expanded="false"><span
-              class="accordion-title">Auto <span class="selected-num">2</span></span><span class="icon"
-              aria-hidden="true"></span></button>
-          <div class="accordion-content">
-            <div class="tab-filter__buttons">
-              <button class="tab-filter__button">Documents</button>
-              <button class="tab-filter__button">Bitcoin</button>
-              <button class="tab-filter__button">Peace</button>
-              <button class="tab-filter__button">Auto</button>
-              <button class="tab-filter__button">Relationship</button>
-              <button class="tab-filter__button">Internet</button>
-              <button class="tab-filter__button">Relocate</button>
+            <div class="accordion-item">
+              <button class="accordion-expand-btn" id="accordion-button-2" aria-expanded="false"><span
+                  class="accordion-title">Politic</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="tab-filter__buttons">
+                  <button class="tab-filter__button tab-filter__button--active">
+                    Documents
+                  </button>
+                  <button class="tab-filter__button">Bitcoin</button>
+                  <button class="tab-filter__button">Peace</button>
+                  <button class="tab-filter__button">Auto</button>
+                  <button class="tab-filter__button">Relationship</button>
+                  <button class="tab-filter__button tab-filter__button--active">
+                    Internet
+                  </button>
+                  <button class="tab-filter__button">Relocate</button>
+                  <button class="tab-filter__button">Animals</button>
+                  <button class="tab-filter__button">Finance</button>
+                  <button class="tab-filter__button">People</button>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <button class="accordion-expand-btn" id="accordion-button-4" aria-expanded="false"><span
-              class="accordion-title">Relax</span><span class="icon" aria-hidden="true"></span></button>
-          <div class="accordion-content">
-            <div class="tab-filter__buttons">
-              <button class="tab-filter__button tab-filter__button--active">
-                Documents
-              </button>
-              <button class="tab-filter__button">Bitcoin</button>
-              <button class="tab-filter__button">Peace</button>
-              <button class="tab-filter__button">Auto</button>
+            <div class="accordion-item">
+              <button class="accordion-expand-btn" id="accordion-button-3" aria-expanded="false"><span
+                  class="accordion-title">Auto</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="tab-filter__buttons">
+                  <button class="tab-filter__button">Documents</button>
+                  <button class="tab-filter__button">Bitcoin</button>
+                  <button class="tab-filter__button">Peace</button>
+                  <button class="tab-filter__button">Auto</button>
+                  <button class="tab-filter__button">Relationship</button>
+                  <button class="tab-filter__button">Internet</button>
+                  <button class="tab-filter__button">Relocate</button>
+                </div>
+              </div>
             </div>
+
+            <div class="accordion-item">
+              <button class="accordion-expand-btn" id="accordion-button-3" aria-expanded="false"><span
+                  class="accordion-title">Auto</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="tab-filter__buttons">
+                  <button class="tab-filter__button">Documents</button>
+                  <button class="tab-filter__button">Bitcoin</button>
+                  <button class="tab-filter__button">Peace</button>
+                  <button class="tab-filter__button">Auto</button>
+                  <button class="tab-filter__button">Relationship</button>
+                  <button class="tab-filter__button">Internet</button>
+                  <button class="tab-filter__button">Relocate</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-expand-btn" id="accordion-button-3" aria-expanded="false"><span
+                  class="accordion-title">Auto</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="tab-filter__buttons">
+                  <button class="tab-filter__button">Documents</button>
+                  <button class="tab-filter__button">Bitcoin</button>
+                  <button class="tab-filter__button">Peace</button>
+                  <button class="tab-filter__button">Auto</button>
+                  <button class="tab-filter__button">Relationship</button>
+                  <button class="tab-filter__button">Internet</button>
+                  <button class="tab-filter__button">Relocate</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <button class="accordion-expand-btn" id="accordion-button-3" aria-expanded="false"><span
+                  class="accordion-title">Auto</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="tab-filter__buttons">
+                  <button class="tab-filter__button">Documents</button>
+                  <button class="tab-filter__button">Bitcoin</button>
+                  <button class="tab-filter__button">Peace</button>
+                  <button class="tab-filter__button">Auto</button>
+                  <button class="tab-filter__button">Relationship</button>
+                  <button class="tab-filter__button">Internet</button>
+                  <button class="tab-filter__button">Relocate</button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-expand-btn" id="accordion-button-4" aria-expanded="false"><span
+                  class="accordion-title">Relax</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <div class="tab-filter__buttons">
+                  <button class="tab-filter__button tab-filter__button--active">
+                    Documents
+                  </button>
+                  <button class="tab-filter__button">Bitcoin</button>
+                  <button class="tab-filter__button">Peace</button>
+                  <button class="tab-filter__button">Auto</button>
+                </div>
+              </div>
+            </div>
+
           </div>
+
         </div>
 
       </div>
+
+
     </div>
+
   </div>
   <script src="js/main.min.js"></script>
 </body>

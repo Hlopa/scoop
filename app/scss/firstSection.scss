@@ -73,6 +73,9 @@
   font-weight: 700;
   line-height: 150%;
   color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover,
   &:focus {
@@ -111,7 +114,7 @@
   text-align: center;
   margin-left: -1px;
   padding: 0px 45px;
-  background-image: url('../images/landing/first-bg.png');
+  background-image: url('../images/landing/first-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   flex-grow: 1;

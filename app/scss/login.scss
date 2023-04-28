@@ -1,0 +1,277 @@
+.login {
+  background-color: #FFF846;
+  min-height: 765px;
+  height: 100vh;
+  display: flex;
+}
+
+.right-auth-img {
+  flex-basis: 55%;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.left-auth-main {
+  flex-basis: 45%;
+  flex-shrink: 0;
+  padding: 90px 46px 46px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.google-auth {
+  width: fit-content;
+  padding: 12px 16px 12px 12px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.auth-logo {
+  margin-bottom: 34px;
+}
+
+.auth-title {
+  font-family: 'Urbanist';
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 121%;
+  margin-bottom: 8px;
+}
+
+.auth-descr {
+  font-family: 'Manrope';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 157%;
+  color: rgba(7, 3, 32, 0.56);
+  margin-bottom: 32px;
+}
+
+.auth-form {
+  width: 428px;
+}
+
+.input-box {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-family: 'Urbanist';
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 133%;
+    display: flex;
+    align-items: center;
+    color: rgba(7, 3, 32, 0.56);
+  }
+
+  input {
+    width: 100%;
+    height: 38px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #070320;
+    border-radius: 0;
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 157%;
+    transition: all 0.3s;
+
+    &:hover {
+      border-bottom: 1px solid #3A95FF;
+    }
+
+    &:active,
+    &:focus {
+      border: none;
+      border-bottom: 1px solid #3A95FF;
+      outline: none;
+    }
+
+    &:-webkit-autofill {
+      background-color: unset !important;
+      box-shadow: 0 0 0 1000px #FFF846 inset !important;
+
+      &:hover {
+        box-shadow: 0 0 0 1000px #FFF846 inset !important;
+      }
+    }
+
+  }
+}
+
+.auth-link {
+  margin-top: -16px;
+  display: block;
+  width: fit-content;
+  font-family: 'Urbanist';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
+}
+
+.auth-btn {
+  margin: unset;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.auth-bottom {
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  p {
+    font-family: 'Urbanist';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    color: rgba(7, 3, 32, 0.56);
+  }
+
+  a {
+    font-family: 'Urbanist';
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 171%;
+    color: #070320;
+  }
+}
+
+.label-with-tooltip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 139px;
+  background-color: black;
+  padding: 4px 6px;
+  border-radius: 0px;
+  font-family: 'Urbanist';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 117%;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.input-error-message {
+  color: #FF5525;
+  font-family: 'Urbanist';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+}
+
+.input-error{
+  border-bottom: 1px solid #FF5525 !important;
+}
+
+
+
+@media (max-width: 1280px) {
+  .right-auth-img {
+    flex-basis: 50%;
+  }
+
+  .left-auth-main {
+    flex-basis: 50%;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .right-auth-img {
+    display: none;
+  }
+
+  .left-auth-main {
+    flex-basis: 100%;
+    align-items: center;
+  }
+
+  .auth-btn{
+    margin: 16px auto;
+  }
+
+  .auth-link{
+    margin: 0px auto;
+  }
+  .auth-bottom{
+    justify-content: center;
+  }
+
+  .auth-logo{
+    margin-bottom: 24px;
+  }
+
+  .auth-descr{
+    margin-bottom: 16px;
+  }
+
+  .input-box{
+    margin-bottom: 20px;
+  }
+
+  .login{
+    min-height: 100vh;
+    height: fit-content
+  }
+
+  .google-auth{
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-auth-main{
+    padding: 90px 32px 32px;
+  }
+
+  .auth-form{
+    width: 100%;
+  }
+  .left-auth-main-inner{
+    width: 100%;
+  }
+}

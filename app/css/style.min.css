@@ -1,6 +1,8 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  min-height: 100%;
+  height: 100%;
 }
 
 body {
@@ -8,6 +10,8 @@ body {
   color: #070320;
   font-family: "Manrope", sans-serif;
   font-weight: 500;
+  min-height: 100%;
+  height: 100%;
 }
 
 *,
@@ -186,6 +190,15 @@ img {
   font-weight: 700;
   line-height: 150%;
   color: #FFFFFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .header-btn:hover, .header-btn:focus {
   color: #cccccc;
@@ -228,7 +241,7 @@ img {
   text-align: center;
   margin-left: -1px;
   padding: 0px 45px;
-  background-image: url("../images/landing/first-bg.png");
+  background-image: url("../images/landing/first-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-flex: 1;
@@ -886,7 +899,7 @@ img {
 .five-section {
   min-width: 444px;
   width: 444px;
-  background-image: url("../images/landing/five-bg.png");
+  background-image: url("../images/landing/five-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -961,7 +974,7 @@ img {
 }
 
 .six-section__logos {
-  height: 100%;
+  height: 80%;
   margin-right: 16px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -1052,6 +1065,9 @@ img {
     padding-right: 0px;
     width: 90%;
     margin: 0px auto;
+  }
+  .six-section {
+    display: none;
   }
 }
 .seven-section {
@@ -1263,6 +1279,7 @@ img {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin: 0px auto;
   }
   .last-section__inner {
     padding-top: 100px;
@@ -1292,6 +1309,11 @@ img {
   border-bottom: 1px solid #000000;
   padding-top: 19px;
   padding-bottom: 19px;
+  position: fixed;
+  top: 0px;
+  z-index: 500;
+  background-color: #b2d6ff;
+  width: 100%;
 }
 
 .news-header__container {
@@ -1388,6 +1410,7 @@ img {
       -ms-flex-positive: 1;
           flex-grow: 1;
   background-color: #b2d6ff;
+  padding-top: 68px;
 }
 
 .news-container {
@@ -1628,6 +1651,41 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+.avatar-btn-logOut {
+  width: 105px;
+  height: 48px;
+  position: absolute;
+  bottom: -60px;
+  left: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #FF5525;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 14px;
+  display: none;
+}
+
+.avatar-btn-logOut--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sign-out-img {
+  margin-right: 8px;
 }
 
 .__select {
@@ -1925,6 +1983,11 @@ img {
   .avatar-name {
     display: none;
   }
+  .avatar-btn-logOut {
+    left: unset;
+    right: 0;
+    bottom: -68px;
+  }
 }
 .modal {
   position: fixed;
@@ -1960,6 +2023,23 @@ img {
 
 .modal-wrapper {
   position: relative;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.modal-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-wrapper::-webkit-scrollbar-track {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+.modal-wrapper::-webkit-scrollbar-thumb {
+  background-color: #EDEDED;
+  border-radius: 20px;
+}
+
+.modal-inner {
   padding: 24px 32px;
   background-color: #fff;
   width: 606px;
@@ -2004,12 +2084,16 @@ img {
   color: #9fc2ff;
 }
 
+.modal-outer {
+  position: relative;
+}
+
 .btn--close-modal {
   position: absolute;
-  right: -20px;
+  right: -30px;
   height: 32px;
   width: 32px;
-  top: -20px;
+  top: -30px;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -2156,16 +2240,6 @@ img {
   background-color: #d4d4d4;
 }
 
-.selected-num {
-  background: #FF5525;
-  font-family: "Urbanist";
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
-  color: #FFFFFF;
-  padding: 0px 4px;
-}
-
 @media (max-width: 400px) {
   .modal-wrapper {
     padding: 24px;
@@ -2175,5 +2249,306 @@ img {
   }
   .modal-header {
     margin-bottom: 8px;
+  }
+}
+.login {
+  background-color: #FFF846;
+  min-height: 765px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.right-auth-img {
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  overflow: hidden;
+}
+.right-auth-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.left-auth-main {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 90px 46px 46px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.google-auth {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 16px 12px 12px;
+  border-radius: 0px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+.auth-logo {
+  margin-bottom: 34px;
+}
+
+.auth-title {
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 121%;
+  margin-bottom: 8px;
+}
+
+.auth-descr {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 157%;
+  color: rgba(7, 3, 32, 0.56);
+  margin-bottom: 32px;
+}
+
+.auth-form {
+  width: 428px;
+}
+
+.input-box {
+  margin-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.input-box label {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(7, 3, 32, 0.56);
+}
+.input-box input {
+  width: 100%;
+  height: 38px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #070320;
+  border-radius: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 157%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.input-box input:hover {
+  border-bottom: 1px solid #3A95FF;
+}
+.input-box input:active, .input-box input:focus {
+  border: none;
+  border-bottom: 1px solid #3A95FF;
+  outline: none;
+}
+.input-box input:-webkit-autofill {
+  background-color: unset !important;
+  -webkit-box-shadow: 0 0 0 1000px #FFF846 inset !important;
+          box-shadow: 0 0 0 1000px #FFF846 inset !important;
+}
+.input-box input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 1000px #FFF846 inset !important;
+          box-shadow: 0 0 0 1000px #FFF846 inset !important;
+}
+
+.auth-link {
+  margin-top: -16px;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
+}
+
+.auth-btn {
+  margin: unset;
+  margin-right: auto;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.auth-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 4px;
+}
+.auth-bottom p {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
+  color: rgba(7, 3, 32, 0.56);
+}
+.auth-bottom a {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
+  color: #070320;
+}
+
+.label-with-tooltip {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 139px;
+  background-color: black;
+  padding: 4px 6px;
+  border-radius: 0px;
+  font-family: "Urbanist";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 117%;
+  color: #FFFFFF;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.input-error-message {
+  color: #FF5525;
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+}
+
+.input-error {
+  border-bottom: 1px solid #FF5525 !important;
+}
+
+@media (max-width: 1280px) {
+  .right-auth-img {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .left-auth-main {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+}
+@media (max-width: 1100px) {
+  .right-auth-img {
+    display: none;
+  }
+  .left-auth-main {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .auth-btn {
+    margin: 16px auto;
+  }
+  .auth-link {
+    margin: 0px auto;
+  }
+  .auth-bottom {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .auth-logo {
+    margin-bottom: 24px;
+  }
+  .auth-descr {
+    margin-bottom: 16px;
+  }
+  .input-box {
+    margin-bottom: 20px;
+  }
+  .login {
+    min-height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .google-auth {
+    margin-top: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .left-auth-main {
+    padding: 90px 32px 32px;
+  }
+  .auth-form {
+    width: 100%;
+  }
+  .left-auth-main-inner {
+    width: 100%;
   }
 }

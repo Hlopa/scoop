@@ -9,6 +9,11 @@
   border-bottom: 1px solid #000000;
   padding-top: 19px;
   padding-bottom: 19px;
+  position: fixed;
+  top: 0px;
+  z-index: 500;
+  background-color: #b2d6ff;
+  width: 100%;
 }
 
 .news-header__container {
@@ -86,6 +91,7 @@
 .news-main {
   flex-grow: 1;
   background-color: #b2d6ff;
+  padding-top: 68px;
 }
 
 .news-container {
@@ -277,18 +283,47 @@
   padding: 11.5px 12px;
 }
 
-.right-news-header{
+.right-news-header {
   display: flex;
   align-items: center;
   gap: 24px;
 }
 
-
-.avatar-box{
+.avatar-box {
   display: flex;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
+  position: relative;
 }
+
+.avatar-btn-logOut {
+  width: 105px;
+  height: 48px;
+  position: absolute;
+  bottom: -60px;
+  left: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  color: #FF5525;
+  font-family: 'Manrope';
+  font-weight: 500;
+  font-size: 14px;
+  display: none;
+}
+
+.avatar-btn-logOut--active {
+  display: flex;
+}
+
+.sign-out-img{
+  margin-right: 8px;
+}
+
 //==================select=====================//
 
 .__select {
@@ -424,17 +459,18 @@
 .menu-burger-news__active {
   span {
     transform: scale(0);
+
     &:first-child {
       transform: rotate(-45deg);
       top: calc(50% - 1px);
     }
+
     &:last-child {
       transform: rotate(45deg);
       bottom: calc(50% - 1px);
     }
   }
 }
-
 
 @media (max-width: 1200px) {
   .news-news {
@@ -490,7 +526,6 @@
   }
 }
 
-
 @media (max-width: 580px) {
   .news-container {
     padding: 0px 24px;
@@ -528,31 +563,32 @@
     line-height: 135%;
   }
 
-  .news-item__header{
+  .news-item__header {
     flex-direction: column-reverse;
   }
-  .news-item__data{
+
+  .news-item__data {
     align-self: flex-end;
   }
 
-  .news-header__container{
+  .news-header__container {
     padding-left: 24px;
     padding-right: 24px;
   }
 
-  .news-header__logo{
+  .news-header__logo {
     width: 100px;
   }
 
-  .menu-burger-inner-news{
+  .menu-burger-inner-news {
     display: block;
   }
 
-  .news-header__menu{
+  .news-header__menu {
     display: none;
   }
 
-  .news-header__menu--active{
+  .news-header__menu--active {
     display: flex;
     gap: 24px;
     justify-content: center;
@@ -564,11 +600,18 @@
     left: 0;
   }
 
-  .news-header__menu-item{
+  .news-header__menu-item {
     font-size: 18px;
   }
 
-  .avatar-name{
+  .avatar-name {
     display: none;
   }
+
+  .avatar-btn-logOut{
+    left: unset;
+    right: 0;
+    bottom: -68px;
+  }
+
 }

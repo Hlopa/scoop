@@ -18,7 +18,7 @@
 }
 
 .six-section__logos{
-  height: 100%;
+  height: 80%;
   margin-right: 16px;
   flex-shrink: 0;
   padding-left: 98px;
@@ -110,6 +110,10 @@
     padding-right: 0px;
     width: 90%;
     margin: 0px auto;
+  }
+
+  .six-section{
+    display: none;
   }
 
 }
