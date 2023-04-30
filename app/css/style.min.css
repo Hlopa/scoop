@@ -609,7 +609,7 @@ img {
 .third-section {
   min-width: 444px;
   width: 444px;
-  background-image: url("../images/landing/third-bg.png");
+  background-image: url("../images/landing/third-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -1073,7 +1073,7 @@ img {
 .seven-section {
   min-width: 444px;
   width: 444px;
-  background-image: url("../images/landing/seven-section.png");
+  background-image: url("../images/landing/seven-section.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   display: -webkit-box;
@@ -2333,7 +2333,7 @@ img {
 .login {
   background-color: #FFF846;
   min-height: 765px;
-  height: 100vh;
+  height: -webkit-fill-available;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2611,7 +2611,7 @@ img {
     margin-bottom: 20px;
   }
   .login {
-    min-height: 100vh;
+    min-height: -webkit-fill-available;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
