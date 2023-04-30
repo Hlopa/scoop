@@ -1,7 +1,7 @@
 .login {
   background-color: #FFF846;
   min-height: 765px;
-  height: 100vh;
+  height: -webkit-fill-available;
   display: flex;
 }
 
@@ -254,7 +254,7 @@
   }
 
   .login{
-    min-height: 100vh;
+    min-height: -webkit-fill-available;
     height: fit-content
   }
 
