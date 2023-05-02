@@ -70,7 +70,7 @@ img {
 
 .main-content {
   min-width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 850px) {
@@ -85,6 +85,11 @@ img {
 @media (max-width: 700px) {
   .main {
     min-width: unset;
+  }
+}
+@media (max-width: 460px) {
+  .main-content {
+    height: 100vh;
   }
 }
 @font-face {
@@ -789,6 +794,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  text-align: center;
 }
 .btn-transform-round:after {
   position: absolute;
@@ -2629,5 +2635,286 @@ img {
   }
   .left-auth-main-inner {
     width: 100%;
+  }
+}
+.addPage__topBlock {
+  min-height: 288px;
+  background-image: url("../images/addPage/addPageBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.addPage__topBlock-container {
+  max-width: 1440px;
+  padding: 40px 24px;
+  margin: 0px auto;
+  width: 100%;
+}
+
+.addPage__title {
+  font-family: "Urbanist";
+  font-weight: 900;
+  font-size: 114.142px;
+  line-height: 83%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.addPage__back {
+  font-family: "Urbanist";
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 171%;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.addPage__main {
+  background-color: #b2d6ff;
+}
+
+.addPage__main-container {
+  max-width: 864px;
+  width: 100%;
+  margin: 0px auto;
+  padding: 40px 32px;
+}
+
+.addPage__main-top {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 160%;
+  color: #070320;
+  margin-bottom: 32px;
+}
+
+.addPage__main-p {
+  margin-bottom: 24px;
+}
+.addPage__main-p h4 {
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 133%;
+  margin-bottom: 8px;
+}
+.addPage__main-p p {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.addPage__main-p a {
+  color: #014dd1;
+}
+.addPage__main-p li {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 16px;
+  opacity: 0.7;
+}
+.addPage__main-p ul,
+.addPage__main-p li {
+  list-style: inside;
+}
+
+.addPage__main-p-bold {
+  opacity: 1 !important;
+}
+
+.addPage__main-p:last-child {
+  margin-bottom: 81px;
+}
+
+.addPage__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #b2d6ff;
+}
+.addPage__footer .main-content {
+  min-height: 100vh;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: unset;
+}
+
+.addPage__footer-left {
+  width: 445px;
+  background-image: url("../images/landing/seven-section.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.addPage__footer-right {
+  padding: 66px 41px 24px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.addPage__footer-right .btn-transform-round {
+  margin-top: 10px;
+}
+
+.addPage__footer-title {
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 88px;
+  line-height: 91%;
+  margin-top: 8px;
+}
+
+.footer-addPage {
+  width: 100%;
+  bottom: 0px;
+  position: relative;
+}
+
+.footer-phone {
+  font-family: "Manrope";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.btn-wrapper {
+  position: relative;
+  z-index: 51;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.about-page {
+  max-width: 1440px;
+  padding: 70px 24px 160px 24px;
+  margin: 0px auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 56px;
+}
+
+.about-page__item {
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+}
+.about-page__item h4 {
+  font-family: "Urbanist";
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 120%;
+  margin-bottom: 12px;
+}
+.about-page__item p {
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+@media (max-width: 1300px) {
+  .addPage__footer-title {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1024px) {
+  .about-page {
+    gap: 32px;
+    padding: 40px 24px 100px 24px;
+  }
+  .about-page__item h4 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 980px) {
+  .about-page__item {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .about-page {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 950px) {
+  .addPage__title {
+    font-size: 60px;
+  }
+  .addPage__main-p h4 {
+    font-size: 22px;
+    margin-bottom: 4px;
+  }
+  .addPage__main-p:last-child {
+    margin-bottom: 40px;
+  }
+  .addPage__footer-title {
+    font-size: 32px;
+  }
+}
+@media (max-width: 720px) {
+  .addPage__footer .main-content {
+    display: none;
+  }
+  .addPage_logo {
+    width: 150px;
+  }
+  .addPage__footer-title {
+    font-size: 28px;
+  }
+  .btn-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 32px;
+  }
+}
+@media (max-width: 430px) {
+  .about-page__item h4 {
+    font-size: 24px;
+  }
+  .about-page__item p {
+    font-size: 14px;
+  }
+  .about-page {
+    padding: 32px 24px 50px 24px;
+  }
+}
+@media (max-width: 400px) {
+  .addPage__footer-right {
+    padding: 24px;
+  }
+  .addPage__footer-right .footer-links {
+    gap: 16px;
+  }
+  .addPage__footer-right .footer-social {
+    gap: 16px;
   }
 }
