@@ -1323,7 +1323,7 @@ img {
 }
 
 .news-header__container {
-  max-width: 1376;
+  max-width: 1376px;
   padding-left: 32px;
   padding-right: 32px;
   margin: 0px auto;
@@ -2677,6 +2677,10 @@ img {
   cursor: pointer;
 }
 
+.addPage__back-black {
+  color: #000;
+}
+
 .addPage__main {
   background-color: #b2d6ff;
 }
@@ -2921,5 +2925,96 @@ img {
   }
   .addPage__footer-right .footer-social {
     gap: 16px;
+  }
+}
+.resources-header {
+  position: relative;
+}
+
+.resources-main {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.resources__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+
+.resources__title {
+  font-weight: 900;
+  font-size: 114.142px;
+  line-height: 83%;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  font-family: "Urbanist";
+}
+
+.resources__descr {
+  color: #454452;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.resources__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 146px;
+}
+
+.resources__item {
+  height: 98px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+@media (max-width: 1030px) {
+  .resources__title {
+    font-size: 80px;
+  }
+  .resources__descr {
+    margin-bottom: 24px;
+  }
+  .resources__item {
+    height: 80px;
+  }
+  .resources__box {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 780px) {
+  .resources__inner {
+    gap: 10px;
+  }
+  .resources__title {
+    font-size: 60px;
+  }
+  .resources__item {
+    height: 50px;
+  }
+  .resources__box {
+    gap: 10px;
+  }
+}
+@media (max-width: 430px) {
+  .resources__title {
+    font-size: 40px;
+  }
+  .resources__item {
+    height: 45px;
+  }
+  .resources__box {
+    gap: 8px;
   }
 }
