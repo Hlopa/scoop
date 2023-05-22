@@ -49,62 +49,189 @@ if (main) {
 const news = document.querySelector(".news");
 
 if (news) {
-  const selectSingle = document.querySelector(".__select");
-  const selectSingle_title = selectSingle.querySelector(".__select__title");
-  const selectSingle_labels = selectSingle.querySelectorAll(".__select__label");
+
+  const selectMode = document.querySelector(".selectMode");
+  const selectModeOpen = selectMode.querySelector('.selectMode-open');
+  const selectMode_title = selectMode.querySelector(".selectMode__title");
+  const selectMode_labels = selectMode.querySelectorAll(".selectMode__label");
   const title = document.getElementById('news-title');
   const img = document.getElementById('news-mode-img');
   const sourse = img.previousElementSibling;
 
+
+  const selectModeMobile = document.querySelector(".selectMode-mobile");
+  const selectModeOpenMobile = selectModeMobile.querySelector('.selectMode-open');
+  const selectMode_titleMobile = selectModeMobile.querySelector(".selectMode__title");
+  const selectMode_labelsMobile = selectModeMobile.querySelectorAll(".selectMode__label");
+
   // Toggle select
-  selectSingle_title.addEventListener("click", () => {
-    if ("active" === selectSingle.getAttribute("data-state")) {
-      selectSingle.setAttribute("data-state", "");
+  selectModeOpen.addEventListener("click", () => {
+    if ("active" === selectMode.getAttribute("data-state")) {
+      selectMode.setAttribute("data-state", "");
     } else {
-      selectSingle.setAttribute("data-state", "active");
+      selectMode.setAttribute("data-state", "active");
     }
   });
 
-  // Close when click to option
-  for (let i = 0; i < selectSingle_labels.length; i++) {
-    selectSingle_labels[i].addEventListener("click", (evt) => {
-      selectSingle_title.textContent = evt.target.textContent;
-      selectSingle.setAttribute("data-state", "");
+  // Toggle select
+  selectModeOpenMobile.addEventListener("click", () => {
+    if ("active" === selectModeMobile.getAttribute("data-state")) {
+      selectModeMobile.setAttribute("data-state", "");
+    } else {
+      selectModeMobile.setAttribute("data-state", "active");
+    }
+  });
 
-      switch (selectSingle_title.textContent) {
-        case 'Mr. President mode':
-          title.textContent ='Dear Sir, let me introduce you to the current world situation how I see it.';
-          img.src = 'images/news/presidend.png';
-          img.style= 'display: block';
-          sourse.srcset = 'images/news/presidend.webp'
+
+  // Close when click to option
+  for (let i = 0; i < selectMode_labelsMobile.length; i++) {
+    selectMode_labelsMobile[i].addEventListener("click", (evt) => {
+      selectMode_titleMobile.textContent = evt.target.textContent;
+      selectModeMobile.setAttribute("data-state", "");
+
+      switch (selectMode_title.textContent) {
+        case 'Highlights':
+          title.textContent = 'Welcome, seekers of truth and discovery!';
+          img.src = 'images/news/highlights.png';
+          img.style = 'display: block';
+          sourse.srcset = 'images/news/highlights.png'
           break;
-        case 'Child mode':
-          title.textContent ='Hi, grown ups! Let me try to tell you what I think about what I know :)';
+        case 'Child':
+          title.textContent = 'Hello, young explorers of news and wonder!';
           img.src = 'images/news/child.png';
-          img.style= 'display: block';
+          img.style = 'display: block';
           sourse.srcset = 'images/news/child.webp'
           break;
-        case 'Preacher mode':
-          title.textContent ='Good day and welcome to this place of worship to honor the news from the world.';
-          img.src = 'images/news/preacher.png';
-          img.style= 'display: block';
-          sourse.srcset = 'images/news/preacher.webp'
+        case 'Summary':
+          title.textContent = 'Greetings, seekers of wisdom and news!';
+          img.src = 'images/news/summary.png';
+          img.style = 'display: block';
+          sourse.srcset = 'images/news/summary.png'
           break;
-        default:
-          title.textContent ='Hey, this is SCOOP, stay informed in a fast and entertaining way with us.';
-          img.style= 'display: none'
+        case 'Statement':
+          title.textContent = 'Greetings, citizens of knowledge and insight!';
+          img.src = 'images/news/statement.png';
+          img.style = 'display: block';
+          sourse.srcset = 'images/news/statement.png'
+          break;
       }
     });
   }
 
-//============Open Acc Menu===============//
+  // Close when click to option
+  for (let i = 0; i < selectMode_labels.length; i++) {
+    selectMode_labels[i].addEventListener("click", (evt) => {
+      selectMode_title.textContent = evt.target.textContent;
+      selectMode.setAttribute("data-state", "");
+
+      switch (selectMode_title.textContent) {
+        case 'Highlights':
+          title.textContent = 'Welcome, seekers of truth and discovery!';
+          img.src = 'images/news/highlights.png';
+          img.style = 'display: block';
+          sourse.srcset = 'images/news/highlights.png'
+          break;
+        case 'Child':
+          title.textContent = 'Hello, young explorers of news and wonder!';
+          img.src = 'images/news/child.png';
+          img.style = 'display: block';
+          sourse.srcset = 'images/news/child.webp'
+          break;
+        case 'Summary':
+          title.textContent = 'Greetings, seekers of wisdom and news!';
+          img.src = 'images/news/summary.png';
+          img.style = 'display: block';
+          sourse.srcset = 'images/news/summary.png'
+          break;
+        case 'Statement':
+          title.textContent = 'Greetings, citizens of knowledge and insight!';
+          img.src = 'images/news/statement.png';
+          img.style = 'display: block';
+          sourse.srcset = 'images/news/statement.png'
+          break;
+      }
+    });
+  }
+
+
+
+  //====Select date==========//
+  if (news) {
+
+    const selectDateMobile = document.querySelector(".selectDate-mobile");
+    const selectDateOpenMobile = selectDateMobile.querySelector('.selectDate-open');
+    const selectDate_titleMobile = selectDateMobile.querySelector(".selectDate_title");
+    const selectDate_labelsMobile = selectDateMobile.querySelectorAll(".selectDate_labels");
+
+    const selectDate = document.querySelector(".selectDate");
+    const selectDateOpen = selectDate.querySelector('.selectDate-open');
+    const selectDate_title = selectDate.querySelector(".selectDate_title");
+    const selectDate_labels = selectDate.querySelectorAll(".selectDate_labels");
+
+    // Toggle select
+    selectDateOpen.addEventListener("click", () => {
+      if ("active" === selectDate.getAttribute("data-state")) {
+        selectDate.setAttribute("data-state", "");
+      } else {
+        selectDate.setAttribute("data-state", "active");
+      }
+    });
+
+       // Toggle select
+       selectDateOpenMobile.addEventListener("click", () => {
+        if ("active" === selectDateMobile.getAttribute("data-state")) {
+          selectDateMobile.setAttribute("data-state", "");
+        } else {
+          selectDateMobile.setAttribute("data-state", "active");
+        }
+      });
+
+    // Close when click to option
+    for (let i = 0; i < selectDate_labels.length; i++) {
+      selectDate_labels[i].addEventListener("click", (evt) => {
+        selectDate_title.textContent = evt.target.textContent;
+        selectDate.setAttribute("data-state", "");
+      });
+    }
+
+      // Close when click to option
+      for (let i = 0; i < selectDate_labelsMobile.length; i++) {
+        selectDate_labelsMobile[i].addEventListener("click", (evt) => {
+          selectDate_titleMobile.textContent = evt.target.textContent;
+          selectDateMobile.setAttribute("data-state", "");
+        });
+      }
+
+
+  }
+
+
+
+  //Open search input
+  const searchBtn = document.querySelector(".search-btn");
+  const cancelBtn = document.querySelector(".search-cancel-btn");
+  const searchBox = document.querySelector(".search-box");
+
+
+  searchBtn.onclick = () => {
+    searchBox.classList.add("active");
+  }
+
+  cancelBtn.onclick = () => {
+    console.log('d');
+    searchBox.classList.remove("active");
+  }
+
+
+
+  //============Open Acc Menu===============//
   const avatar = document.querySelector('.avatar-box');
   const logOutBtn = document.querySelector('.avatar-btn-logOut');
 
   avatar?.addEventListener('click', function (e) {
     logOutBtn.classList.toggle('avatar-btn-logOut--active');
   })
-  
+
 
   //open tags modal  
   const linkOpen = document.querySelector('.link--open-modal');
@@ -154,7 +281,7 @@ themeSection?.forEach((theme) => {
 
   themeSelectAll.addEventListener('click', function (e) {
     themeSelectAll.classList.toggle('tab-filter__button--active');
-    if(themeSelectAll.classList.contains('tab-filter__button--active')){
+    if (themeSelectAll.classList.contains('tab-filter__button--active')) {
       selectors.forEach((select) => {
         select.classList.add('tab-filter__button--active');
       })
@@ -167,7 +294,7 @@ themeSection?.forEach((theme) => {
 
   selectors.forEach((select) => {
     select.addEventListener('click', function (e) {
-      if(select.classList.contains('tab-filter__button--active')){
+      if (select.classList.contains('tab-filter__button--active')) {
         selectors.forEach((item) => {
           item.classList.remove('tab-filter__button--active')
         })
@@ -180,7 +307,7 @@ themeSection?.forEach((theme) => {
         themeSelectAll.classList.remove('tab-filter__button--active')
       }
 
-     
+
     })
   })
 })
@@ -205,10 +332,9 @@ burger?.addEventListener('click', () => {
 
 
 //Хедер-бургер-новости
-
 const burgerNews = document.querySelector('.menu-burger-news'),
   menuBodyNews = document.querySelector('.news-header__menu'),
-  menuItemNews = menuBodyNews?.querySelectorAll('.news-header__menu-item') ;
+  menuItemNews = menuBodyNews?.querySelectorAll('.news-header__menu-item');
 
 burgerNews?.addEventListener('click', () => {
   burgerNews.classList.toggle('menu-burger-news__active');
@@ -217,8 +343,9 @@ burgerNews?.addEventListener('click', () => {
 
 menuItemNews?.forEach((item) => {
   item?.addEventListener('click', () => {
-    burgerNews.classList.toggle('menu-burger-news__active');
-    menuBodyNews.classList.toggle('news-header__menu--active');
+    console.log('f');
+    burgerNews.classList.remove('menu-burger-news__active');
+    menuBodyNews.classList.remove('news-header__menu--active');
   })
 })
 
