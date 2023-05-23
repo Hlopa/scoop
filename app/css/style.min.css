@@ -1616,7 +1616,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 4px;
-  color: #014DD1;
+  color: #014dd1;
 }
 
 .news-social {
@@ -1714,7 +1714,7 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  color: #FF5525;
+  color: #ff5525;
   font-family: "Manrope";
   font-weight: 500;
   font-size: 14px;
@@ -1741,7 +1741,7 @@ img {
   height: 100%;
   width: 100%;
   border: 1px solid #000000;
-  background: #B2D6FF;
+  background: #b2d6ff;
   font-size: 12px;
   border-radius: 12px;
   padding: 0 45px 0 10px;
@@ -1772,13 +1772,13 @@ img {
 
 .search-box .cancel-btn {
   position: absolute;
-  color: #664AFF;
+  color: #664aff;
   top: 50%;
   right: -75px;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  color: #664AFF;
+  color: #664aff;
   font-size: 25px;
   cursor: pointer;
   height: 50px;
@@ -1835,8 +1835,14 @@ img {
   border-top-width: 1px;
 }
 
+.select-mode picture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .selectMode__title {
-  color: #014DD1;
+  color: #014dd1;
 }
 
 .selectMode-modal .selectMode__title {
