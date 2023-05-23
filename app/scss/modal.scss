@@ -101,6 +101,45 @@
   cursor: pointer;
 }
 
+.modal-subscription-footer{
+  position: sticky;
+  bottom: -0.5px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+  margin-left: -32px;
+}
+
+
+.modal-subscription-footer-left{
+  flex-grow: 1;
+  background-color: #fff;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-left: 32px;
+  
+}
+
+
+.modal-subscription-btn{
+  width: 33%;
+  background-color: #000000;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  height: 64px;
+  margin-left: -32px;
+  margin-right: -32px;
+  position: sticky;
+  bottom: -0.5px;
+  cursor: pointer;
+}
+
 .modal-outer {
   position: relative;
 }
@@ -320,4 +359,49 @@
     gap: 0px;
   }
 
+}
+
+
+//===========================Subscription modal================//
+
+.subsr-item {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding: 1em 0;
+  color: #014DD1;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Urbanist';
+  transition: all 0.3s;
+}
+
+.icon-plus {
+  margin-right: 11px;
+  transition: all 0.3s;
+}
+
+.icon-plus path {
+  transition: all 0.3s;
+}
+
+.subsr-item.active {
+  color: #AFAEB5;
+
+  .icon-plus path {
+    fill: #AFAEB5;
+  }
+
+  .icon-plus  {
+   transform: rotate(45deg);
+  }
+}
+
+.send-to-email{
+  font-family: 'Manrope';
+  font-weight: 700;
 }

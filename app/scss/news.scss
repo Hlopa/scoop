@@ -46,15 +46,15 @@
 
 .news-header__menu {
   display: flex;
-  gap: 24px;
+  gap: 16px;
   align-items: center;
 }
 
 .news-header__menu-item {
   font-family: "Urbanist";
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
   color: #070320;
   cursor: pointer;
 }
@@ -452,11 +452,21 @@
   }
 }
 
+.selectMode__title{
+  color: #014DD1;
+}
+
+.selectMode-modal{
+  .selectMode__title{
+    color: #000
+  }
+}
+
 .__select__title {
   font-family: "Urbanist";
   font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 16px;
+  line-height: 150%;
   display: flex;
   align-items: center;
   width: 100%;
@@ -467,6 +477,7 @@
   border-radius: 112px;
   background: transparent;
   justify-content: flex-end;
+  user-select: none;
 
   &:hover {
     border-color: #0c0fe5;
@@ -495,6 +506,13 @@
   top: unset;
   right: -50%;
 }
+
+.selectMode-modal .__select__content{
+  bottom: 48px;
+  top: unset;
+  right: -50%;
+}
+
 
 .__select__input {
   display: none;

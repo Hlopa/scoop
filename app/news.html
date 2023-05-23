@@ -90,6 +90,7 @@
 
             </li>
             <li class="news-header__menu-item link--open-modal">Topics</li>
+            <li class="news-header__menu-item link--open-modal-subscriptions">Subscriptions</li>
           </ul>
 
           <div class="search-box">
@@ -126,7 +127,9 @@
               <div class="__select selectMode selectMode-mobile" data-state="">
                 <div style="display: flex;align-items: center;" class="selectMode-open select-open-mobile">
                   <div class="__select__title selectMode__title" data-default="Highlights">Highlights </div>
-                  <img class="select-arrow" src="images/icons/arrowDown.svg">
+                  <div style="display: flex; align-items: center;">
+                    <img class="select-arrow" src="images/icons/arrowDown.svg">
+                  </div>
                 </div>
                 <div class="__select__content">
                   <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" checked />
@@ -146,9 +149,10 @@
               <div class="__select selectDate selectDate-mobile" data-state="">
                 <div style="display: flex;align-items: center;" class="selectDate-open select-open-mobile">
                   <div class="__select__title selectDate_title" data-default="selectDate4">All time</div>
-                  <img class="select-arrow" src="images/icons/arrowDown.svg">
+                  <div style="display: flex; align-items: center;">
+                    <img class="select-arrow" src="images/icons/arrowDown.svg">
+                  </div>
                 </div>
-
                 <div class="__select__content selectDate_content">
                   <input id="selectDate1" class="__select__input" type="radio" name="selectDate" />
                   <label for="selectDate1" class="__select__label selectDate_labels">Today</label>
@@ -476,9 +480,9 @@
     </main>
   </div>
 
-  <div class="modal">
+  <div class="modal modal-topics">
     <div class="modal-outer">
-      <button type="button" class="btn--close-modal">
+      <button type="button" class="btn--close-modal btn--close-modal-topics">
         <svg width="24" height="24" viewBox="0 0 24 24">
           <rect width="24" height="24" rx="12" />
           <path
@@ -615,6 +619,399 @@
               </div>
             </div>
             <button class="modal-apply-btn">Apply</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="modal modal-subscriptions modal--open">
+    <div class="modal-outer">
+      <button type="button" class="btn--close-modal-subscriptions btn--close-modal">
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <rect width="24" height="24" rx="12" />
+          <path
+            d="M3 12C3 7.02944 7.02944 3 12 3V3C16.9706 3 21 7.02944 21 12V12C21 16.9706 16.9706 21 12 21V21C7.02944 21 3 16.9706 3 12V12Z" />
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M6.7045 15.7201C6.26517 16.1594 6.26517 16.8717 6.7045 17.311C7.14384 17.7504 7.85616 17.7504 8.2955 17.311L12.0533 13.5533L15.8111 17.3111C16.2504 17.7504 16.9628 17.7504 17.4021 17.3111C17.8414 16.8717 17.8414 16.1594 17.4021 15.7201L13.6443 11.9623L17.3111 8.29543C17.7504 7.85609 17.7504 7.14378 17.3111 6.70444C16.8718 6.2651 16.1595 6.2651 15.7201 6.70444L12.0533 10.3713L8.38649 6.70448C7.94715 6.26514 7.23483 6.26514 6.7955 6.70448C6.35616 7.14382 6.35616 7.85613 6.7955 8.29547L10.4623 11.9623L6.7045 15.7201Z"
+            fill="#ffffff" />
+        </svg>
+      </button>
+      <div class="modal-wrapper">
+        <div class="modal-inner">
+          <div class="modal-header">
+            <h4 class="modal-title">Subscribtions to topics</h4>
+          </div>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Crypto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Politic</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Finance</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Auto</span></button>
+            </div>
+            <div class="accordion-item">
+              <button class="subsr-item" id="subscr-1">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.274414 7C0.274414 6.53976 0.64751 6.16666 1.10775 6.16666H6.16697V1.10744C6.16697 0.647205 6.54007 0.274109 7.0003 0.274109C7.46054 0.274109 7.83364 0.647205 7.83364 1.10744V6.16666H12.8929C13.3531 6.16666 13.7262 6.53976 13.7262 7C13.7262 7.46023 13.3531 7.83333 12.8929 7.83333H7.83364V12.8926C7.83364 13.3528 7.46054 13.7259 7.0003 13.7259C6.54007 13.7259 6.16697 13.3528 6.16697 12.8926V7.83333H1.10775C0.64751 7.83333 0.274414 7.46024 0.274414 7Z"
+                    fill="#014DD1" />
+                </svg><span class="accordion-title">Garden</span></button>
+            </div>
+
+
+          </div>
+          <div class="modal-subscription-footer">
+            <div class="modal-subscription-footer-left">
+              <form>
+                <label class="send-to-email">
+                  <input type="checkbox" class="checkbox">
+                  Send it to email
+                </label>
+              </form>
+
+              <form class="select-mode">
+                <div class="__select selectMode-modal" data-state="">
+                  <div style="display: flex;align-items: center;" class="selectMode-open">
+                    <div class="__select__title selectMode__title" data-default="Highlights">Highlights </div>
+                    <img class="select-arrow" src="images/icons/arrowDown.svg">
+                  </div>
+                  <div class="__select__content">
+                    <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" checked />
+                    <label for="singleSelect1" class="__select__label selectMode__label">Highlights</label>
+                    <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" />
+                    <label for="singleSelect0" class="__select__label selectMode__label">Summary</label>
+                    <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                    <label for="singleSelect3" class="__select__label selectMode__label">Statement</label>
+                    <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+                    <label for="singleSelect4" class="__select__label selectMode__label">Child</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <button class="modal-subscription-btn">Save</button>
           </div>
         </div>
 

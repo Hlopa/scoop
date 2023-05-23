@@ -1364,7 +1364,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 24px;
+  gap: 16px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1372,9 +1372,9 @@ img {
 
 .news-header__menu-item {
   font-family: "Urbanist";
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 17px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
   color: #070320;
   cursor: pointer;
 }
@@ -1835,11 +1835,19 @@ img {
   border-top-width: 1px;
 }
 
+.selectMode__title {
+  color: #014DD1;
+}
+
+.selectMode-modal .selectMode__title {
+  color: #000;
+}
+
 .__select__title {
   font-family: "Urbanist";
   font-weight: 600;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 16px;
+  line-height: 150%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1856,6 +1864,10 @@ img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .__select__title:hover {
   border-color: #0c0fe5;
@@ -1886,6 +1898,12 @@ img {
 }
 
 .select-mobile .__select__content {
+  bottom: 48px;
+  top: unset;
+  right: -50%;
+}
+
+.selectMode-modal .__select__content {
   bottom: 48px;
   top: unset;
   right: -50%;
@@ -2305,6 +2323,53 @@ img {
   cursor: pointer;
 }
 
+.modal-subscription-footer {
+  position: sticky;
+  bottom: -0.5px;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 5px 10px rgb(0, 0, 0);
+          box-shadow: 0 5px 10px rgb(0, 0, 0);
+  margin-left: -32px;
+}
+
+.modal-subscription-footer-left {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background-color: #fff;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  padding-left: 32px;
+}
+
+.modal-subscription-btn {
+  width: 33%;
+  background-color: #000000;
+  font-family: "Manrope";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+  height: 64px;
+  margin-left: -32px;
+  margin-right: -32px;
+  position: sticky;
+  bottom: -0.5px;
+  cursor: pointer;
+}
+
 .modal-outer {
   position: relative;
 }
@@ -2512,6 +2577,54 @@ img {
     gap: 0px;
   }
 }
+.subsr-item {
+  position: relative;
+  display: block;
+  text-align: left;
+  padding: 1em 0;
+  color: #014DD1;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Urbanist";
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.icon-plus {
+  margin-right: 11px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.icon-plus path {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.subsr-item.active {
+  color: #AFAEB5;
+}
+.subsr-item.active .icon-plus path {
+  fill: #AFAEB5;
+}
+.subsr-item.active .icon-plus {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.send-to-email {
+  font-family: "Manrope";
+  font-weight: 700;
+}
+
 .login {
   background-color: #FFF846;
   min-height: 765px;
