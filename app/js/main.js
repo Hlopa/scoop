@@ -64,6 +64,13 @@ if (news) {
   const selectMode_titleMobile = selectModeMobile.querySelector(".selectMode__title");
   const selectMode_labelsMobile = selectModeMobile.querySelectorAll(".selectMode__label");
 
+
+  const selectModeModal = document.querySelector(".selectMode-modal");
+  const selectModeOpenModal = selectModeModal.querySelector('.selectMode-open');
+  const selectMode_titleModal = selectModeModal.querySelector(".selectMode__title");
+  const selectMode_labelsModal = selectModeModal.querySelectorAll(".selectMode__label");
+
+
   // Toggle select
   selectModeOpen.addEventListener("click", () => {
     if ("active" === selectMode.getAttribute("data-state")) {
@@ -81,6 +88,16 @@ if (news) {
       selectModeMobile.setAttribute("data-state", "active");
     }
   });
+
+    // Toggle select
+    selectModeOpenModal.addEventListener("click", () => {
+      if ("active" === selectModeModal.getAttribute("data-state")) {
+        selectModeModal.setAttribute("data-state", "");
+      } else {
+        selectModeModal.setAttribute("data-state", "active");
+      }
+    });
+  
 
 
   // Close when click to option
@@ -152,6 +169,16 @@ if (news) {
       }
     });
   }
+
+
+  // Close when click to option
+  for (let i = 0; i < selectMode_labelsModal.length; i++) {
+    selectMode_labelsModal[i].addEventListener("click", (evt) => {
+      selectMode_titleModal.textContent = evt.target.textContent;
+      selectModeModal.setAttribute("data-state", "");
+    });
+  }
+
 
 
 
@@ -235,8 +262,8 @@ if (news) {
 
   //open tags modal  
   const linkOpen = document.querySelector('.link--open-modal');
-  const btnClose = document.querySelector(".btn--close-modal");
-  const modal = document.querySelector(".modal");
+  const btnClose = document.querySelector(".btn--close-modal-topics");
+  const modal = document.querySelector(".modal-topics");
 
   linkOpen?.addEventListener("click", function (e) {
     modal.classList.add("modal--open");
@@ -247,6 +274,35 @@ if (news) {
   btnClose?.addEventListener("click", function (e) {
     modal.classList.remove("modal--open");
   });
+
+
+  //open subscription modal
+
+  const linkOpenSubsc = document.querySelector('.link--open-modal-subscriptions');
+  const btnCloseSubsc = document.querySelector(".btn--close-modal-subscriptions");
+  const modalSubsc = document.querySelector(".modal-subscriptions");
+
+  linkOpenSubsc?.addEventListener("click", function (e) {
+    modalSubsc.classList.add("modal--open");
+    burger.classList.remove("menu-burger__active");
+    menuBody.classList.remove("header__menu-body--show");
+  });
+
+  btnCloseSubsc?.addEventListener("click", function (e) {
+    modalSubsc.classList.remove("modal--open");
+  });
+
+  //choose subscription topics
+
+
+
+  const subscriptionItems = document.querySelectorAll('.subsr-item');
+
+  subscriptionItems?.forEach((item) => (
+    item.addEventListener("click", function (e) {
+      item.classList.toggle('active')
+    })
+  ))
 
 }
 
