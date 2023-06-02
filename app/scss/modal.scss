@@ -62,7 +62,6 @@
   font-family: "Urbanist";
   font-weight: 700;
   font-size: 40px;
-  line-height: 48px;
 }
 
 .clear-all-btn {
@@ -329,7 +328,50 @@
   }
 }
 
+@media (max-width: 550px) {
+  .modal-subscription-footer{
+  flex-wrap: wrap;
+  margin-right: -32px;
+  height: unset;
+  box-shadow: none
+  }
+
+  .modal-subscription-btn{
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .modal-subscription-footer-left{
+    form{
+      width: 50%;
+    }
+  }
+
+  .modal{
+    padding: 32px 16px;
+  }
+
+  .btn--close-modal{
+    top: 5px;
+    right: 5px;
+    z-index: 50;
+  }
+}
+
+
 @media (max-width: 400px) {
+
+  .modal-subscription-footer{
+    margin-right: -24px;
+    margin-left: -24px;
+    }
+
+    .modal-subscription-footer-left{
+      padding-left: 16px;
+      gap: 8px
+    }
+    
+
 
   .modal-title {
     font-size: 24px;

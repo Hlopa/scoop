@@ -23,6 +23,12 @@
   margin: 0px auto;
 }
 
+.news-header__container__inner{
+  display: flex;
+   align-items: center; 
+   gap: 8px
+}
+
 .news-header__container {
   display: flex;
   align-items: center;
@@ -33,6 +39,7 @@
   display: flex;
   align-items: end;
   gap: 8px;
+  margin-right: 24px;
 }
 
 .news-header__descr {
@@ -274,7 +281,7 @@
 
 .aside-bottom {
   position: fixed;
-  bottom: 40px;
+  bottom: 20px;
   width: 25%;
 }
 
@@ -353,29 +360,29 @@
 .search-box {
   position: relative;
   height: 40px;
-  width: 185px;
+  width: 306px;
 }
 
 .search-box input {
   height: 100%;
   width: 100%;
-  border: 1px solid #000000;
+  border: 1px solid rgba(7, 3, 32, 0.12);
   background: #b2d6ff;
   font-size: 12px;
   border-radius: 12px;
-  padding: 0 45px 0 10px;
+  padding: 0 34px 0 30px;
   outline: none;
   color: #454452;
   opacity: 1;
 }
 
-.search-box .search-btn {
+.search-box .search-icon {
   height: 40px;
-  width: 40px;
+  width: 32px;
   background: transparent;
   position: absolute;
   top: 50%;
-  right: 0px;
+  left: 0px;
   transform: translateY(-50%);
   text-align: center;
   vertical-align: middle;
@@ -388,27 +395,31 @@
 }
 
 .search-box .cancel-btn {
+  background: transparent;
   position: absolute;
-  color: #664aff;
   top: 50%;
-  right: -75px;
+  right: 16px;
   transform: translateY(-50%);
-  color: #664aff;
-  font-size: 25px;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
   text-align: center;
+  vertical-align: middle;
   border-radius: 50%;
-  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+  display: none;
+}
+
+.search-box .cancel-btn--active {
+  display: block;
 }
 
 .select-open-mobile {
-  background: #62a1ea;
+  background: #B2D6FF;
   border: 1px solid #000;
-  border-radius: 12px;
+  border-radius: 0px;
   padding: 0px 24px;
+  height: 64px;
+  justify-content: center;
 }
 
 .search-box.active .cancel-btn {
@@ -418,15 +429,13 @@
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.search-cancel-btn {
-  opacity: 0;
-}
+
 
 //==================select=====================//
 
 .__select {
   position: relative;
-  width: fit-content;
+  width: 100%;
   margin: 0 auto;
 
   &[data-state="active"] {
@@ -437,6 +446,14 @@
 
     .select-arrow {
       transform: rotate(180deg);
+    }
+
+    .select-open-mobile{
+background-color: #96acc5
+    }
+
+    .__select__title{
+      color: #014DD1;
     }
 
     .select-mobile .select-arrow {
@@ -473,14 +490,13 @@
   line-height: 150%;
   display: flex;
   align-items: center;
-  width: 100%;
   height: 100%;
   padding: 8px 12px;
   border-radius: 5px;
   cursor: pointer;
   border-radius: 112px;
   background: transparent;
-  justify-content: flex-end;
+  justify-content: center;
   user-select: none;
 
   &:hover {
@@ -506,15 +522,16 @@
 }
 
 .select-mobile .__select__content {
-  bottom: 48px;
+  bottom: 80px;
   top: unset;
-  right: -50%;
+  right:0px ;
+  width: 100%;
 }
 
 .selectMode-modal .__select__content {
   bottom: 48px;
   top: unset;
-  right: -50%;
+  // right: -50%;
 }
 
 .__select__input {
@@ -555,15 +572,8 @@
   display: none;
 }
 
-.menu-burger-inner-news {
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-  display: none;
-}
-
 .menu-burger-news {
-  display: block;
+  display: none;
   position: relative;
   width: 30px;
   height: 18px;
@@ -605,6 +615,22 @@
   }
 }
 
+.menu-burger-list {
+  display: none;
+}
+.news-header__logo--mobile {
+  display: none;
+}
+
+.footer-news-mobile{
+  display: none;
+}
+
+.select-topics-mobile{
+  display: none;
+}
+
+
 @media (max-width: 1200px) {
   .news-news {
     flex-basis: 75%;
@@ -614,6 +640,10 @@
     right: unset;
     left: 40px;
     bottom: 120px;
+  }
+
+  .search-box {
+    width: 180px;
   }
 }
 
@@ -648,12 +678,12 @@
   }
 
   .aside-bottom {
-    width: unset;
+    flex-wrap: wrap;
+    width: 100%;
     display: flex;
-    gap: 16px;
     align-items: center;
     position: fixed;
-    bottom: 20px;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 101;
@@ -667,6 +697,17 @@
   .news-container {
     flex-direction: column;
   }
+
+  .footer-news-mobile{
+    display: block;
+  }
+
+  .news-social{
+    display: none;
+  }
+  .news-container {
+    margin-bottom: 140px;
+  }
 }
 
 .news-item__logo--mobile {
@@ -674,15 +715,141 @@
 }
 
 @media (max-width: 970px) {
+
+  .select-topics-mobile{
+    display: block;
+    width: 100%;
+    p{
+      background: #FFF846;
+      width: fit-content;
+      margin: 0px auto 16px auto;
+      padding: 18px 32px;
+      border-radius: 56px;
+      border: 1px solid #070320;
+      font-weight: 600;
+      font-family: 'Urbanist';
+      text-transform: capitalize;
+      position: relative;
+    }
+  }
+
+  .select-topics-mobile--selected{
+p::after{
+  position: absolute;
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #FF5525;
+  top: 12px;
+  right: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+
+}
+  }
+
+  .selectMode__title {
+    color: #000;
+  }
+
+  
+
+  .select-mobile {
+    display: block;
+    width: 50%;
+  }
+
+
   .news-header__descr {
     display: none;
+  }
+
+  .menu-burger-news {
+    display: block;
+  }
+
+  .right-news-header {
+    display: none;
+  }
+
+  .search-box {
+    width: 300px;
+  }
+
+  .menu-burger-list--active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: #b2d6ff;
+    width: 100%;
+    padding: 32px 32px 40px;
+    height: calc(100vh - 61px);
+  }
+
+  .avatar-box-burger {
+    text-align: center;
+    margin-bottom: 24px;
+
+    .avatar {
+      width: 64px;
+      height: 64px;
+      margin: 0px auto 12px auto;
+    }
+
+    .avatar-name {
+      font-size: 24px;
+    }
+  }
+
+  .buttons-burger {
+    width: 292px;
+    margin: 0px auto 50px auto;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.32);
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .buttons-burger__button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    height: 56px;
+    background-color: transparent;
+    text-align: left;
+    padding-left: 12px;
+    font-size: 16px;
+    font-family: "Urbanist";
+    font-weight: 600;
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 30px;
+    }
+  }
+
+  .buttons-burger__button--subscribtions {
+    &::after {
+      content: url("/images/icons/arrowRightBlack.svg");
+    }
+  }
+
+  .buttons-burger__button--signOut {
+    color: #ff5525;
+    border-top: 1px solid rgba(7, 3, 32, 0.12);
+    &::after {
+      content: url("/images/icons/arrowRightRed.svg");
+    }
   }
 }
 
 @media (max-width: 770px) {
-  .select-mobile {
-    display: block;
-  }
+
 
   .news-container {
     padding: 0px 24px;
@@ -729,16 +896,12 @@
   }
 
   .news-header__container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 
   .news-header__logo {
     width: 100px;
-  }
-
-  .menu-burger-inner-news {
-    display: block;
   }
 
   .news-header__menu {
@@ -765,6 +928,12 @@
     display: none;
   }
 
+  .avatar-box-burger {
+    .avatar-name {
+      display: blo;
+    }
+  }
+
   .avatar-btn-logOut {
     left: unset;
     right: 0;
@@ -776,40 +945,34 @@
   }
 }
 
-@media (max-width: 500px) {
-  .search-box {
-    width: 0px;
-    position: absolute;
-  }
-
-  .search-box.active {
-    width: calc(100% - 100px);
-    position: absolute;
-    right: 80px;
-  }
-
-  .search-box input {
-    opacity: 0;
-  }
-
-  .search-box.active input {
-    opacity: 1;
-  }
-
-  .search-cancel-btn {
+@media (max-width: 550px) {
+  .news-header__logo--mobile {
     display: block;
-    opacity: 0;
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+    width: fit-content;
+    margin-right: 14px;
   }
 
-  .search-box.active .search-cancel-btn {
-    opacity: 1;
+  .news-header__logo--desktop {
+    display: none;
   }
 
+  .buttons-burger {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-box{
+    width: unset;
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+
+  .news-header__container__inner{
+    flex-grow: 1;
+  }
+
+ 
   .right-news-header {
     gap: 30px;
   }

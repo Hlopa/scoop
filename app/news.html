@@ -29,21 +29,88 @@
     <header class="news-header">
       <div class="news-header__container">
 
-        <div style="display: flex; align-items: center; gap: 8px">
-          <div class="menu-burger-inner-news">
-            <div class="header__menu-icon menu-burger-news">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+        <div class="news-header__container__inner">
+          <div class="news-header__logo news-header__logo--desktop">
+            <img src="images/logo-text-shrink.svg" alt="logo" />
           </div>
 
-          <div class="news-header__logo">
-            <img src="images/logo-text-shrink.svg" alt="logo" />
-            <p class="news-header__descr">New Culture Of Being Informed</p>
+          <div class="news-header__logo news-header__logo--mobile">
+            <img src="images/logo-mobile.svg" alt="logo" />
+          </div>
+          <div class="search-box">
+            <div class="search-icon">
+              <img src="images/icons/search.png" alt="search">
+            </div>
+            <input type="text" placeholder="Search..." class="search-input"/>
+            <div class="cancel-btn">
+              <img src="images/icons/close.svg" alt="close search">
+            </div>
           </div>
         </div>
 
+
+        <div class="header__menu-icon menu-burger-news">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="menu-burger-list">
+          <div style="flex-grow: 1">
+            <div class="avatar-box-burger">
+              <div class="avatar">
+                <img src="images/news/avatar.png" alt="avatar" />
+              </div>
+              <p class="avatar-name">Guy Hawkins</p>
+            </div>
+            <div class="buttons-burger">
+              <button class="buttons-burger__button buttons-burger__button--subscribtions"> Subscribtions</button>
+              <button class="buttons-burger__button buttons-burger__button--signOut">Sign Out</button>
+            </div>
+          </div>
+
+
+          <footer class="footer footer-addPage">
+            <div class="footer__inner">
+              <div class="footer-top">
+                <ul class="footer-social footer-social-mobile">
+                  <li>
+                    <a href="https://twitter.com/Scoop_Ai"> <img src="images/landing/twitter.svg"></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/scoop.ai"> <img src="images/landing/inst.svg"></a>
+                  </li>
+                </ul>
+
+                <div class="footer-top-top">
+                  <ul class="footer-links">
+                    <li><a href="/resources.html">Resources</a> </li>
+                    <li><a href="/about.html">About</a> </li>
+                  </ul>
+                </div>
+                <div class="footer-top-bottom">
+                  <ul class="footer-links">
+                    <li><a href="/privacy.html">Privacy Policy</a> </li>
+                    <li><a href="/terms.html">Terms of Use</a> </li>
+                  </ul>
+
+                  <ul class="footer-social footer-social-hide-mobile">
+                    <li>
+                      <a href="https://twitter.com/Scoop_Ai"> <img src="images/landing/twitter.svg"></a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/scoop.ai"> <img src="images/landing/inst.svg"></a>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+              <div class="footer-bottom">
+                <p>© Scoop, 2023</p>
+              </div>
+            </div>
+          </footer>
+        </div>
 
         <div class="right-news-header">
           <ul class="news-header__menu">
@@ -92,18 +159,6 @@
             <li class="news-header__menu-item link--open-modal">Topics</li>
             <li class="news-header__menu-item link--open-modal-subscriptions">Subscriptions</li>
           </ul>
-
-          <div class="search-box">
-            <input type="text" placeholder="Search..." />
-            <button class="search-btn">
-              <img src="images/icons/search.png" alt="search">
-            </button>
-
-            <div class="search-cancel-btn">
-              <img src="images/icons/close.png" alt="close search">
-            </div>
-          </div>
-
           <div class="avatar-box">
             <div class="avatar">
               <img src="images/news/avatar.png" alt="avatar" />
@@ -123,6 +178,9 @@
             <img src="images/news/highlights.png" id="news-mode-img" />
           </div>
           <div class="aside-bottom">
+            <div class="select-topics-mobile select-topics-mobile--selected">
+              <p>Select topics</p>
+            </div>
             <form class="select-mode select-mobile">
               <div class="__select selectMode selectMode-mobile" data-state="">
                 <div style="display: flex;align-items: center;" class="selectMode-open select-open-mobile">
@@ -469,13 +527,46 @@
           </ul>
         </div>
 
-        <div class="news-mobile-footer">
-          <ul class="aside__menu">
-            <li>Privacy Policy</li>
-            <li>Terms of Use</li>
-          </ul>
-          <p class="right">© Scoop, 2023</p>
-        </div>
+        <footer class="footer footer-addPage footer-news-mobile">
+          <div class="footer__inner">
+            <div class="footer-top">
+              <ul class="footer-social footer-social-mobile">
+                <li>
+                  <a href="https://twitter.com/Scoop_Ai"> <img src="images/landing/twitter.svg"></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/scoop.ai"> <img src="images/landing/inst.svg"></a>
+                </li>
+              </ul>
+
+              <div class="footer-top-top">
+                <ul class="footer-links">
+                  <li><a href="/resources.html">Resources</a> </li>
+                  <li><a href="/about.html">About</a> </li>
+                </ul>
+              </div>
+              <div class="footer-top-bottom">
+                <ul class="footer-links">
+                  <li><a href="/privacy.html">Privacy Policy</a> </li>
+                  <li><a href="/terms.html">Terms of Use</a> </li>
+                </ul>
+
+                <ul class="footer-social footer-social-hide-mobile">
+                  <li>
+                    <a href="https://twitter.com/Scoop_Ai"> <img src="images/landing/twitter.svg"></a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/scoop.ai"> <img src="images/landing/inst.svg"></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="footer-bottom">
+              <p>© Scoop, 2023</p>
+            </div>
+          </div>
+        </footer>
       </div>
     </main>
   </div>
@@ -686,20 +777,6 @@
                     fill="#014DD1" />
                 </svg><span class="accordion-title">Garden</span></button>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             <div class="accordion-item">
               <button class="subsr-item" id="subscr-1">
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="icon-plus">
