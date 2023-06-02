@@ -89,15 +89,15 @@ if (news) {
     }
   });
 
-    // Toggle select
-    selectModeOpenModal.addEventListener("click", () => {
-      if ("active" === selectModeModal.getAttribute("data-state")) {
-        selectModeModal.setAttribute("data-state", "");
-      } else {
-        selectModeModal.setAttribute("data-state", "active");
-      }
-    });
-  
+  // Toggle select
+  selectModeOpenModal.addEventListener("click", () => {
+    if ("active" === selectModeModal.getAttribute("data-state")) {
+      selectModeModal.setAttribute("data-state", "");
+    } else {
+      selectModeModal.setAttribute("data-state", "active");
+    }
+  });
+
 
 
   // Close when click to option
@@ -196,7 +196,7 @@ if (news) {
     const selectDate_labels = selectDate.querySelectorAll(".selectDate_labels");
 
     // Toggle select
-    selectDateOpen.addEventListener("click", () => {
+    selectDateOpen?.addEventListener("click", () => {
       if ("active" === selectDate.getAttribute("data-state")) {
         selectDate.setAttribute("data-state", "");
       } else {
@@ -204,14 +204,14 @@ if (news) {
       }
     });
 
-       // Toggle select
-       selectDateOpenMobile.addEventListener("click", () => {
-        if ("active" === selectDateMobile.getAttribute("data-state")) {
-          selectDateMobile.setAttribute("data-state", "");
-        } else {
-          selectDateMobile.setAttribute("data-state", "active");
-        }
-      });
+    // Toggle select
+    selectDateOpenMobile?.addEventListener("click", () => {
+      if ("active" === selectDateMobile.getAttribute("data-state")) {
+        selectDateMobile.setAttribute("data-state", "");
+      } else {
+        selectDateMobile.setAttribute("data-state", "active");
+      }
+    });
 
     // Close when click to option
     for (let i = 0; i < selectDate_labels.length; i++) {
@@ -221,13 +221,13 @@ if (news) {
       });
     }
 
-      // Close when click to option
-      for (let i = 0; i < selectDate_labelsMobile.length; i++) {
-        selectDate_labelsMobile[i].addEventListener("click", (evt) => {
-          selectDate_titleMobile.textContent = evt.target.textContent;
-          selectDateMobile.setAttribute("data-state", "");
-        });
-      }
+    // Close when click to option
+    for (let i = 0; i < selectDate_labelsMobile.length; i++) {
+      selectDate_labelsMobile[i].addEventListener("click", (evt) => {
+        selectDate_titleMobile.textContent = evt.target.textContent;
+        selectDateMobile.setAttribute("data-state", "");
+      });
+    }
 
 
   }
@@ -236,28 +236,40 @@ if (news) {
 
   //Open search input
   const searchBtn = document.querySelector(".search-btn");
-  const cancelBtn = document.querySelector(".search-cancel-btn");
   const searchBox = document.querySelector(".search-box");
 
-
-  searchBtn.onclick = () => {
+  searchBtn?.addEventListener('click', function (e) {
     searchBox.classList.add("active");
-  }
+  })
 
-  cancelBtn.onclick = () => {
-    console.log('d');
-    searchBox.classList.remove("active");
-  }
+  const searchInput = document.querySelector('.search-input');
+  const closeIcon = document.querySelector('.cancel-btn');
 
+  searchInput?.addEventListener('input', function (e) {
+    if (e.target.value.length > 0) {
+      if (!closeIcon.classList.contains('cancel-btn--active')) {
+        closeIcon.classList.add('cancel-btn--active')
+      } 
+    } else {
+      closeIcon.classList.remove('cancel-btn--active')
+    }
+  })
+
+  closeIcon?.addEventListener('click', function (e) {
+    searchInput.value = '';
+    closeIcon.classList.remove('cancel-btn--active')
+  })
 
 
   //============Open Acc Menu===============//
-  const avatar = document.querySelector('.avatar-box');
+  const avatar = document.querySelectorAll('.avatar-box');
   const logOutBtn = document.querySelector('.avatar-btn-logOut');
 
-  avatar?.addEventListener('click', function (e) {
-    logOutBtn.classList.toggle('avatar-btn-logOut--active');
-  })
+  avatar?.forEach((item) => (
+    item.addEventListener('click', function (e) {
+      logOutBtn.classList.toggle('avatar-btn-logOut--active')
+    })
+  ))
 
 
   //open tags modal  
@@ -335,7 +347,7 @@ themeSection?.forEach((theme) => {
   const themeSelectAll = theme.querySelector('.select-all');
   const selectors = theme.querySelectorAll('.select-btn');
 
-  themeSelectAll.addEventListener('click', function (e) {
+  themeSelectAll?.addEventListener('click', function (e) {
     themeSelectAll.classList.toggle('tab-filter__button--active');
     if (themeSelectAll.classList.contains('tab-filter__button--active')) {
       selectors.forEach((select) => {
@@ -348,7 +360,7 @@ themeSection?.forEach((theme) => {
     }
   });
 
-  selectors.forEach((select) => {
+  selectors?.forEach((select) => {
     select.addEventListener('click', function (e) {
       if (select.classList.contains('tab-filter__button--active')) {
         selectors.forEach((item) => {
@@ -362,18 +374,16 @@ themeSection?.forEach((theme) => {
         select.classList.add('tab-filter__button--active')
         themeSelectAll.classList.remove('tab-filter__button--active')
       }
-
-
     })
   })
 })
 
 
-// tabFilterButtons?.forEach((button) => {
-//   button.addEventListener('click', function (e) {
-//     button.classList.toggle('tab-filter__button--active')
-//   })
-// });
+tabFilterButtons?.forEach((button) => {
+  button.addEventListener('click', function (e) {
+    button.classList.toggle('tab-filter__button--active')
+  })
+});
 
 
 
@@ -388,20 +398,24 @@ burger?.addEventListener('click', () => {
 
 
 //Хедер-бургер-новости
-const burgerNews = document.querySelector('.menu-burger-news'),
-  menuBodyNews = document.querySelector('.news-header__menu'),
-  menuItemNews = menuBodyNews?.querySelectorAll('.news-header__menu-item');
+const burgerNews = document.querySelectorAll('.menu-burger-news'),
+  menuBodyNews = document.querySelector('.menu-burger-list'),
+  menuItemNews = menuBodyNews?.querySelectorAll('.news-header__menu-item'),
+  buttonsBurger = document.querySelectorAll('.buttons-burger__button');
 
-burgerNews?.addEventListener('click', () => {
-  burgerNews.classList.toggle('menu-burger-news__active');
-  menuBodyNews.classList.toggle('news-header__menu--active');
-})
-
-menuItemNews?.forEach((item) => {
+burgerNews?.forEach((item) => (
   item?.addEventListener('click', () => {
-    console.log('f');
-    burgerNews.classList.remove('menu-burger-news__active');
-    menuBodyNews.classList.remove('news-header__menu--active');
+    item.classList.toggle('menu-burger-news__active');
+    menuBodyNews.classList.toggle('menu-burger-list--active');
+  })
+))
+
+buttonsBurger?.forEach((item) => {
+  item?.addEventListener('click', () => {
+    burgerNews?.forEach((burger) => (
+      burger.classList.remove('menu-burger-news__active')
+    ))
+    menuBodyNews.classList.remove('menu-burger-list--active');
   })
 })
 
