@@ -325,6 +325,10 @@ img {
   display: none;
 }
 
+.menu-burger-inner {
+  margin-right: 16px;
+}
+
 .menu-burger {
   margin-left: 17px;
   display: block;
@@ -2477,6 +2481,34 @@ img {
   cursor: pointer;
 }
 
+.subscribtions-disabled {
+  margin-left: -32px;
+  margin-right: -32px;
+  height: 565px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-image: url("../images/news/modal-disabled.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid #000;
+}
+.subscribtions-disabled p {
+  color: rgba(7, 3, 32, 0.56);
+  margin-top: -8px;
+}
+
 .modal-subscription-footer {
   position: sticky;
   bottom: -0.5px;
@@ -2510,7 +2542,7 @@ img {
 
 .modal-subscription-btn {
   width: 33%;
-  background-color: #000000;
+  border: none;
   font-family: "Manrope";
   font-weight: 700;
   font-size: 16px;
@@ -2521,7 +2553,8 @@ img {
   margin-right: -32px;
   position: sticky;
   bottom: -0.5px;
-  cursor: pointer;
+  background-color: #C2C2C5;
+  cursor: auto;
 }
 
 .modal-outer {
@@ -2731,6 +2764,13 @@ img {
     right: 5px;
     z-index: 50;
   }
+  .subscribtions-disabled {
+    margin-left: 0;
+    margin-right: 0;
+    height: 400px;
+    background-image: none;
+    border-top: none;
+  }
 }
 @media (max-width: 400px) {
   .modal-subscription-footer {
@@ -2811,6 +2851,11 @@ img {
 .send-to-email {
   font-family: "Manrope";
   font-weight: 700;
+  color: #AFAEB5;
+}
+
+.modal-subscription-footer .selectMode-modal {
+  opacity: 0.5;
 }
 
 .login {
