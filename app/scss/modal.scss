@@ -100,6 +100,27 @@
   cursor: pointer;
 }
 
+.subscribtions-disabled{
+  margin-left: -32px;
+  margin-right: -32px;
+  height: 565px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../images/news/modal-disabled.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid #000;
+  p{
+    color: rgba(7, 3, 32, 0.56);
+    margin-top: -8px;
+  }
+}
+
+
+
 .modal-subscription-footer{
   position: sticky;
   bottom: -0.5px;
@@ -125,7 +146,7 @@
 
 .modal-subscription-btn{
   width: 33%;
-  background-color: #000000;
+border: none;
   font-family: "Manrope";
   font-weight: 700;
   font-size: 16px;
@@ -136,7 +157,9 @@
   margin-right: -32px;
   position: sticky;
   bottom: -0.5px;
-  cursor: pointer;
+    background-color: #C2C2C5;
+    cursor: auto;
+  
 }
 
 .modal-outer {
@@ -326,6 +349,7 @@
   .modal-wrapper {
     width: 100%;
   }
+
 }
 
 @media (max-width: 550px) {
@@ -355,6 +379,14 @@
     top: 5px;
     right: 5px;
     z-index: 50;
+  }
+
+  .subscribtions-disabled{
+    margin-left: 0;
+    margin-right: 0;
+    height: 400px;
+    background-image: none;
+    border-top: none;
   }
 }
 
@@ -446,4 +478,12 @@
 .send-to-email{
   font-family: 'Manrope';
   font-weight: 700;
+color: #AFAEB5;
+}
+
+.modal-subscription-footer{
+  .selectMode-modal{
+opacity: 0.5;
+}
+
 }
