@@ -99,6 +99,21 @@ if (news) {
   });
 
 
+  document.addEventListener(
+    "click",
+    function (event) {
+      if (event.target.matches(".selectMode") ||
+        !event.target.closest(".selectMode")) {
+        selectMode.setAttribute("data-state", "");
+      }
+
+      if (event.target.matches(".selectMode-mobile") ||
+      !event.target.closest(".selectMode-mobile")) {
+        selectModeMobile.setAttribute("data-state", "");
+    }
+    },
+  )
+
 
   // Close when click to option
   for (let i = 0; i < selectMode_labelsMobile.length; i++) {
@@ -230,6 +245,22 @@ if (news) {
     }
 
 
+    document.addEventListener(
+      "click",
+      function (event) {
+        if (event.target.matches(".selectDate") ||
+          !event.target.closest(".selectDate")) {
+            selectDate.setAttribute("data-state", "");
+        }
+
+        if (event.target.matches(".selectDate-mobile") ||
+        !event.target.closest(".selectDate-mobile")) {
+          selectDateMobile.setAttribute("data-state", "");
+      }
+      },
+    )
+
+
   }
 
 
@@ -249,7 +280,7 @@ if (news) {
     if (e.target.value.length > 0) {
       if (!closeIcon.classList.contains('cancel-btn--active')) {
         closeIcon.classList.add('cancel-btn--active')
-      } 
+      }
     } else {
       closeIcon.classList.remove('cancel-btn--active')
     }
@@ -418,4 +449,7 @@ buttonsBurger?.forEach((item) => {
     menuBodyNews.classList.remove('menu-burger-list--active');
   })
 })
+
+
+
 
