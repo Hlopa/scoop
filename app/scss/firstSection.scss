@@ -182,7 +182,7 @@
 
 .menu-burger {
   margin-left: 17px;
-  display: block;
+  display: none;
   position: relative;
   width: 30px;
   height: 18px;
@@ -272,6 +272,10 @@
 
   .menu-burger-news {
     display: flex;
+  }
+
+  .menu-burger{
+    display: block;
   }
 
   .header-menu {

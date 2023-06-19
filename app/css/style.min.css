@@ -331,7 +331,7 @@ img {
 
 .menu-burger {
   margin-left: 17px;
-  display: block;
+  display: none;
   position: relative;
   width: 30px;
   height: 18px;
@@ -415,6 +415,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .menu-burger {
+    display: block;
   }
   .header-menu {
     display: none;
